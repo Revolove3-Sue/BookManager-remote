@@ -1,33 +1,12 @@
 package com.rabbiter.bms.model;
 
+import lombok.Data;
+
+@Data  // 自动生成 getter、setter、toString、equals、hashCode 和构造函数
 public class BookType {
-    private Integer booktypeid;
+    private Integer bookTypeId;  // 属性名采用 camelCase 风格
+    private String bookTypeName; // 属性名采用 camelCase 风格
+    private String bookTypeDesc; // 属性名采用 camelCase 风格
 
-    private String booktypename;
-
-    private String booktypedesc;
-
-    public Integer getBooktypeid() {
-        return booktypeid;
-    }
-
-    public void setBooktypeid(Integer booktypeid) {
-        this.booktypeid = booktypeid;
-    }
-
-    public String getBooktypename() {
-        return booktypename;
-    }
-
-    public void setBooktypename(String booktypename) {
-        this.booktypename = booktypename;
-    }
-
-    public String getBooktypedesc() {
-        return booktypedesc;
-    }
-
-    public void setBooktypedesc(String booktypedesc) {
-        this.booktypedesc = booktypedesc;
-    }
+    // Lombok 会自动生成无参构造函数和包含所有属性的构造函数
 }
