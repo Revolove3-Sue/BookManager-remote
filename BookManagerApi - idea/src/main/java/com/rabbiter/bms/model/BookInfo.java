@@ -1,95 +1,26 @@
-package com.rabbiter.bms.model;
-
 import java.math.BigDecimal;
 
 public class BookInfo {
-    private Integer bookid;
+    private int bookId;
+    private String bookName;
+    private String bookAuthor;
+    private BigDecimal bookPrice;
+    private int bookTypeId;
+    private String bookTypeName;
+    private String bookDesc;
+    private BorrowStatus isBorrowed;
+    private String bookImg;
 
-    private String bookname;
-
-    private String bookauthor;
-
-    private BigDecimal bookprice;
-
-    private Integer booktypeid;
-
-    private String booktypename;
-
-    private String bookdesc;
-
-    private Byte isborrowed;
-
-    private String bookimg;
-
-    public Integer getBookid() {
-        return bookid;
+    public BookInfo(int bookId, String bookName, String bookAuthor, BigDecimal bookPrice) {
+        this.bookId = bookId;
+        this.bookName = bookName;
+        this.bookAuthor = bookAuthor;
+        this.bookPrice = bookPrice;
     }
 
-    public void setBookid(Integer bookid) {
-        this.bookid = bookid;
-    }
+    // Getter and Setter methods...
 
-    public String getBookname() {
-        return bookname;
-    }
-
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
-    }
-
-    public String getBookauthor() {
-        return bookauthor;
-    }
-
-    public void setBookauthor(String bookauthor) {
-        this.bookauthor = bookauthor;
-    }
-
-    public BigDecimal getBookprice() {
-        return bookprice;
-    }
-
-    public void setBookprice(BigDecimal bookprice) {
-        this.bookprice = bookprice;
-    }
-
-    public Integer getBooktypeid() {
-        return booktypeid;
-    }
-
-    public void setBooktypeid(Integer booktypeid) {
-        this.booktypeid = booktypeid;
-    }
-
-    public String getBooktypename() {
-        return booktypename;
-    }
-
-    public void setBooktypename(String booktypename) {
-        this.booktypename = booktypename;
-    }
-
-    public String getBookdesc() {
-        return bookdesc;
-    }
-
-    public void setBookdesc(String bookdesc) {
-        this.bookdesc = bookdesc;
-    }
-
-    public Byte getIsborrowed() {
-        return isborrowed;
-    }
-
-    public void setIsborrowed(Byte isborrowed) {
-        this.isborrowed = isborrowed;
-    }
-
-    public String getBookimg() {
-        return bookimg;
-    }
-
-    public void setBookimg(String bookimg) {
-        this.bookimg = bookimg;
+    public enum BorrowStatus {
+        AVAILABLE, BORROWED
     }
 }
