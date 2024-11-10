@@ -5,15 +5,14 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.lang.NonNull;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLDecoder;
 
 @Configuration
 public class CorsConfig implements WebMvcConfigurer {
 
     @Override
-    public void addCorsMappings(CorsRegistry registry) {
+    public void addCorsMappings(@NonNull CorsRegistry registry) {
         registry.addMapping("/**")
                 //是否发送Cookie
                 .allowCredentials(true)
@@ -27,7 +26,7 @@ public class CorsConfig implements WebMvcConfigurer {
     }
 
     @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
         String winPath = PathUtils.getClassLoadRootPath() + "/src/main/resources/static/files/";
 
         //第一个方法设置访问路径前缀，第二个方法设置资源路径

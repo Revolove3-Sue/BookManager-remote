@@ -3,6 +3,7 @@ package com.rabbiter.bms.utils;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.ServletContextAware;
+import org.springframework.lang.NonNull;
 
 import javax.servlet.ServletContext;
 import java.io.BufferedReader;
@@ -16,7 +17,7 @@ public class ProcessContextAware implements ServletContextAware {
     private String port;
 
     @Override
-    public void setServletContext(ServletContext servletContext) {
+    public void setServletContext(@NonNull ServletContext servletContext) {
         try {
             String os = System.getProperty("os.name").toLowerCase();
 
