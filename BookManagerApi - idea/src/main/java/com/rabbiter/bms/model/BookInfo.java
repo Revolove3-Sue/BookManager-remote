@@ -1,3 +1,5 @@
+package com.rabbiter.bms.model;
+
 import java.math.BigDecimal;
 
 public class BookInfo {
