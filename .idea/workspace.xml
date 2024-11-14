@@ -5,204 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ec74cc9-2e2d-43b2-9537-f96191aa059e" name="更改" comment="优化项目结构">
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/BookManagerApplication.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/config/CorsConfig.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/exception/NotEnoughException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/exception/OperationFailureException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/interceptor/ReaderInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/interceptor/UserInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BookInfoMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BookInfoMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BookTypeMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BookTypeMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BorrowMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/BorrowMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/UserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/model/BookInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/model/BookType.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/model/Borrow.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/model/User.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/BookInfoService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/BookTypeService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/BorrowService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/impl/BookInfoServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/impl/BookTypeServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/impl/BorrowServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/service/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/BASE64Encoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/JsonUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/MyResult$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/MyResult$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/MyResult$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/MyResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/MyUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/PathUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/ProcessContextAware.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/utils/TokenProcessor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/BookInfoController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/BookTypeController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/BorrowController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/UpdateController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/UserController$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/bms/web/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/00b3cfa2b0b2b87143ed1a1c2c11e5c9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/067358fdc0fb79174b233c5fb182465c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/0add0b6465c251bc54b2423247fc733c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/0e977d6ca78a79e7c168204fa887361b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/0ec98e31dd1364d0da50ab4926cf7b33.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/0ef596fea23e97b93cf0c3c7eacca404.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/134c7910e24b8670ad41d373cc931ee0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/13d938b85a1432bfe50a72052761c25f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/17f9dcfe3b460f4d551fba11b6ff9bf9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/1b1868464fe1df77aea4fddcd6247637.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/1bc57d860fe2aa0faca7527d9136ed2a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/22351dd543706c32a96324ef1bd5c9c3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/25e83691bbf8f73f8064f6e1c669b54b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/3da3ebbb7bef047009e5b9d4b63e0cb7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/414c76e17418796010a6f8b5aee3ece8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/449ba0fd4c006daa83490a07948576d6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/45781768fa3be4b859144d880dc2a8c9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/47c59df30735c7ea82bb4e0aab1001d1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/47ffc0036030edddd14300f3d3089f23.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4adda8688da224c722ac3dd044606758.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4e46361c0627ca850e13451a263b068c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/546e81e49980b37d2b07f24fa3f5c211.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/589b84039cc6bda965cc3be78eaebf00.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/60269caca346c4b95822a129c79b3eb0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/62c6eee428ca455e0f746b7409ce6dd7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/68e3364bf0ff09cc01c0bf0a63f1f488.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/6cd2d7744830a2045f4499901f3ffbb1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/71aa50b0ca3fe3ac16b6fd33cc4ec04f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/778d4ada249a89f27a9c23f8322464ce.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/89805ad3ed0e9a6547bb49d07f7612b5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/8c6d2c92656272aef910f856f0e0030f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/8d509c371bb4ebdccc18be9a107eebf3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/91c4da660a3e2992a96113e386be97e5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/93fc34dc6339118cdb90dc943eb24dca.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/a2416c01e6bc9e15bec3f3931ff7b8a5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/a71a6ade87071477d88933d2b350f886.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/a8d0d9727445dcd617b638d3714d1057.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/b55508c5dcccd49d374c1aae24b351ef.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/b58062aa13bb73074c64ffe16d092d70.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/c5a8686dc83f2818ebeb3dffc8e148de.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/c920f8b6c0cf8bd773ecec18b558914e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/c9e7de1275e4fe8839ef77ec20970adf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/ce83844a069b0f67e3a4a74485350c4d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/d72cac462e2796084f516f4af3a77315.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/d796f0accad1f2ddb16da720d1812eb7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/dc0a076e1c70579168f1c0c481611078.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/dca51fbd048457f299d4bdcb3d082ed4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/e02cec699396ff7f2742c9da403eb500.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/ea158a58cf4b6f21d115743c1ddc0bb3.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/ec685074072433462834e6d750c4a444.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/ee4ec90347f6757fbf64bce48b56e1d2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/f2c93401c84b3d2fcb257c26fc57522c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/f43945e8cbfb6c90e4d6b719870b6344.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/f8ede8930272826a229cade0dad7b43d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/fc2082a3b9cc3692399a07cee6950f16.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/0016606bc45e1ec6e07ce442c674366d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/01d60bd89ace6d7ce5ec88219e10e7f2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/03602c5ed3b7207154e3969590875f7e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/04ac3ee14d468558dbf771694ef3d73c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/06295803c1445e613d41c45f3776d8ce.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/0787fbedbb5302cf53b1d5a0fc2b1c52.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/0abe51053611662d22e80082395e9e7b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/0b647f04eb5aa751ae201d9bea0fceb7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/0df8188b725bd7f7fa372e5442a1cab6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/133651e49e5c62e9231bec933fb3a9d9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/1b1d23dbab2b32b00c26db57ff0e4915.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/2038155e1cd56ca0df1bb4d9d21b2795.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/2039819979dd1a763da95391ba98c4d6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/25488fa01a7bab601e9f5681f6fe45e1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/2eaee0873d93113c7361896d7ba1bf17.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/35bbb7342aa858f61ec1de428181763a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/38296d2d564d6ed33557bb64c233c92d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/3c361b71bf94cc1ffc403ddfe00d2226.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/3f35f74d099ed08756a02a21b99d0b38.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/43b5018bc8b022df72fe46f77da7699d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/46a168cb0d9f081eb8e6bebcb5a35fb5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/49a1aa6867e3be52f36e9115a65a4a2f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/4d26c6d9a7e822b899f1c6c228f6c4b6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/550a8e2822eb80494e982f875d251348.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/5a1677d70c9ef939917e4603a1d434d0.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/5c0110cd9a9656805488cf3460f90d06.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/5c0ced08a07f9ef1a5bf3d92206667f4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/5e32986440571ba2ddf27464a2cf91b2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/609a0949c5879cd91ea3fefea838311b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/63fa8fb4b70aa5f3174ae894f9fc6eb7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/68b7517fc0e64b0055d435569703d6f9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/6d2c22bf7bdfa606a6d9bd9ff84eebe7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/6d85fca2a8ac48e35a32363ab88a0c0c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/6d9f64ddb318bddfb0511e212f472aeb.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/77b3b3337267c229c8d15f1f99f7f9cb.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/7a594c2373470ed1e6a417f541addc27.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/7bc9d6a08530a90a4466a87aeb22966a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/8157de6d55f4921ecab6a19af5fd129b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/86498054b9a4955c394300870932f33b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/885d87ad79c7b0c33ab573c304bd596f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/887b18c0ab648657a296607ac53e0924.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/8a34f6970825992ee589bdaa6d4c0424.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/8a9d3fc80b6cc329f11c2e30685cbb8b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9352dfbb03a9d1b1536a62ba30852855.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9464179fd00c57fb458173b812d16b11.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9a12ef27ece77c22f2741eb0768dccc4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9aa71d58eacc53b17dc4dfcb9f42c092.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9cd10e40be920d25ac80d0d57943f4e7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9ee1aa37aa8e92df031ad784ac3586f2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/9f2e9eae3718b5e45985bdc78b99a9f4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a1bcf91529c994967d16adf32fc13b1e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a1d30224cd006618f2050e979d664f81.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a2975fdfdcb24738606120b851546463.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a3c52d5ae2fa9294fd5e8f447632ee78.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a4e96c0f035834528ebb6b99d4b9b7eb.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a52e5bc1f34fe5eb91e7a985c1549b50.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a593110c099f309a8e42cda391c97cfc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a5c2104a117683c1717ee3238c178101.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a6206fc8c209fc506b58b978961e49a9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/a70a8c5105e8af7814ce33ec4ca1c402.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ab5eb7fbdc98cffa2a67c6a618880f59.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/abe476722dcab4000c5b97ba71917400.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ae60919efafd4e6b973807fb8368e339.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b156a3636f01d67334f98a082cb9aebf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b16f2d26c125ebcfd00f72ae45301fa8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b416591851c277ec10e77e5fe815c4c9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b4801a428456019e2f021fd1a335e8ef.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b4c2059a395d19e7b4bdb2fd1644051c.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b7e261799fd6d36257ae7b277499ee1a.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/b7e60506eae0dd421e09329f3b82afae.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/bd906c90e317c2b4c19a067a786afa78.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/bddc155daccb5b81086d76781046e7e4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/be5b88e8877424f11f462123e2730f46.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/c80d3e2abbd0f238c2aeaa6889e5d889.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/c87f0945df8a6304636785fb503800a5.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/cca976416608aba65dd81f6742f67aa2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/cf831db9abaadeed622d7e7b79ebe088.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/d0a0d6cf4f561095f68fd275c07ac0ed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/d4533f17daeefad4e473179ac669bc81.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/d8a53a8e4dd6522a9bd1717d8ca7e585.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/d8dbb74c71e716ddee3d633b32378003.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/d95eb3f0e74b70c026618887543a404d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/de705432da5dc29acb32b160ee942fb9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/def1dc65c9e16e9f6e62fd9652b905c9.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/e0ed007b4852ba06839bbfd42c0a2ae7.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/e4f1588f44ae446bfd98e7a33a6f89b6.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/eb6fff8cc8b8e1a0ffeab6aa5857ee81.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ec1a051b4ad7ccc1d1c0b523b88dc1a2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ec3565a7c488abfd62615ca2107d5c24.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ec940d24774bfa19051b9b7b6db2956f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/edadcb6e5383978ee578d84137ae56aa.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/edb3819f4f306aca756df7ce5c6f9447.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/edb42c65920a6c82d392f4db1d99fedc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/f239d862de1dbe1b79cf00a34f5fcaf4.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/f2d156f42df525d31394d5b7ee06f353.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/f4a6e43adecebb550ff8721a89699a6e.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/f8a3e312dd1011f6ddf14123836f906d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/fbefd840b3300d339f1a7aa48c745db8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/fbfac5c845f55d3087104715c65175ff.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/vue-loader/ff9a88faa7086df0b8115b70a7e24f39.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,13 +18,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2omvlI7njPkIDOYf26ZsBoB4xNt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -230,43 +30,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a44eaee18422c85eaa8b4f5e440e68a3&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BookManagerApplication (1).executor": "Run",
+    "Spring Boot.BookManagerApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/陶闰喆/Documents/GitHub/Librasphere",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "configurable.group.editor",
+    "spring.configuration.checksum": "a44eaee18422c85eaa8b4f5e440e68a3",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookManagerApplication">
-    <configuration name="BookManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.dev">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true">
       <module name="BookManagerApi" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bms.BookManagerApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.rabbiter.bms.BookManagerApplication" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bms.*" />
+          <option name="PATTERN" value="com.rabbiter.bms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -274,18 +93,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="serve" type="js.build_tools.npm" nameIsGenerated="true">
+    <configuration name="dev" type="js.build_tools.npm" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/BookManagerVue/package.json" />
       <command value="run" />
       <scripts>
-        <script value="serve" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="npm.serve" />
+      <item itemvalue="npm.dev" />
       <item itemvalue="Spring Boot.BookManagerApplication" />
     </list>
     <recent_temporary>
@@ -293,6 +112,14 @@
         <item itemvalue="Spring Boot.BookManagerApplication" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -305,6 +132,8 @@
       <workItem from="1731487719499" duration="787000" />
       <workItem from="1731488519826" duration="44000" />
       <workItem from="1731488572817" duration="1261000" />
+      <workItem from="1731550487041" duration="73000" />
+      <workItem from="1731550574206" duration="2200000" />
     </task>
     <task id="LOCAL-00001" summary="修复 无法解析符号 'PathUtils' 的问题">
       <created>1731488246129</created>
