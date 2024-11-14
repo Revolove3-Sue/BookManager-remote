@@ -1,5 +1,6 @@
 # 基于Springboot+Vue的图书管理系统Librasphere
 
+<<<<<<< Updated upstream
 [![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url][![MIT License][license-shield]][license-url][![LinkedIn][linkedin-shield]][linkedin-url]
 
 <br />
@@ -28,6 +29,12 @@
 
 Librasphere是一套在线图书管理系统，技术选型为前后端分离，前端基于Vue.js，后端基于Java语言开发，使用了SpringBoot和MyBatis框架提高开发效率和质量。主要面向图书馆管理员和读者在图书管理、图书借阅等需求。  
 ![image](images/homepage.png)
+=======
+
+## 项目简介
+
+Librasphere是一款图书管理程序，技术选型为前后端分离，前端基于Vue.js，后端基于Java语言开发，使用了SpringBoot和MyBatis框架提高开发效率和质量。主要面向图书馆管理员和读者在图书管理、图书借阅等需求。
+>>>>>>> Stashed changes
 
 ## 技术栈
 
