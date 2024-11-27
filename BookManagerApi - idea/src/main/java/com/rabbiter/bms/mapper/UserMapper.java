@@ -7,23 +7,23 @@ import java.util.List;
 import java.util.Map;
 
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer userid);
+    int deleteByPrimaryKey(Integer userId);
 
     int insert(User record);
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer userid);
+    User selectByPrimaryKey(Integer userId);
 
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
 
-    User selectByUsernameAndPasswordAndIsAdmin(@Param("username") String username,
+    User selectByuserNameAndPasswordAndisAdmin(@Param("userName") String userName,
                                   @Param("password") String password,
                                   @Param("isAdmin") Byte isAdmin);
 
-    User selectByUsername(String username);
+    User selectByuserName(String userName);
 
     List<User> selectAllByLimit(@Param("begin") Integer begin, @Param("size") Integer size);
 

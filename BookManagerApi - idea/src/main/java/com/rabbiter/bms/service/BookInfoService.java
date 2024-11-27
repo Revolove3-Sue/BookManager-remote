@@ -10,7 +10,7 @@ public interface BookInfoService {
 
     List<BookInfo> queryBookInfos();
 
-    BookInfo queryBookInfoById(Integer bookid);
+    BookInfo queryBookInfoById(Integer bookId);
 
     Integer getSearchCount(Map<String, Object> params);
 

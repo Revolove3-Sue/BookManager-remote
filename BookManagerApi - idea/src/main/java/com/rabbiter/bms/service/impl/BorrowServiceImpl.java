@@ -33,8 +33,8 @@ public class BorrowServiceImpl implements BorrowService {
         // 添加string类型的时间显示
         for(Borrow borrow : borrows) {
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-            if(borrow.getBorrowtime() != null) borrow.setBorrowtimestr(simpleDateFormat.format(borrow.getBorrowtime()));
-            if(borrow.getReturntime() != null) borrow.setReturntimestr(simpleDateFormat.format(borrow.getReturntime()));
+            if(borrow.getBorrowTime() != null) borrow.setBorrowTimeStr(simpleDateFormat.format(borrow.getBorrowTime()));
+            if(borrow.getReturnTime() != null) borrow.setReturnTimeStr(simpleDateFormat.format(borrow.getReturnTime()));
         }
         return borrows;
     }
@@ -44,8 +44,8 @@ public class BorrowServiceImpl implements BorrowService {
         // 将string类型的时间重新调整
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         try {
-            borrow.setBorrowtime(simpleDateFormat.parse(borrow.getBorrowtimestr()));
-            borrow.setReturntime(simpleDateFormat.parse(borrow.getReturntimestr()));
+            borrow.setBorrowTime(simpleDateFormat.parse(borrow.getBorrowTimeStr()));
+            borrow.setReturnTime(simpleDateFormat.parse(borrow.getReturnTimeStr()));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -61,9 +61,9 @@ public class BorrowServiceImpl implements BorrowService {
     @Override
     public Integer deleteBorrow(Borrow borrow) {
         // 先查询有没有还书
-        Borrow borrow1 = borrowMapper.selectByPrimaryKey(borrow.getBorrowid());
-        if(borrow1.getReturntime() == null) return 0;
-        return borrowMapper.deleteByPrimaryKey(borrow.getBorrowid());
+        Borrow borrow1 = borrowMapper.selectByPrimaryKey(borrow.getBorrowId());
+        if(borrow1.getReturnTime() == null) return 0;
+        return borrowMapper.deleteByPrimaryKey(borrow.getBorrowId());
     }
 
     @Override
@@ -80,8 +80,8 @@ public class BorrowServiceImpl implements BorrowService {
         // 将string类型的时间重新调整
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
         try {
-            borrow.setBorrowtime(simpleDateFormat.parse(borrow.getBorrowtimestr()));
-            borrow.setReturntime(simpleDateFormat.parse(borrow.getReturntimestr()));
+            borrow.setBorrowTime(simpleDateFormat.parse(borrow.getBorrowTimeStr()));
+            borrow.setReturnTime(simpleDateFormat.parse(borrow.getReturnTimeStr()));
         } catch (ParseException e) {
             e.printStackTrace();
         }
@@ -95,8 +95,8 @@ public class BorrowServiceImpl implements BorrowService {
     }
 
     @Override
-    public Borrow queryBorrowsById(Integer borrowid) {
-        return borrowMapper.selectByPrimaryKey(borrowid);
+    public Borrow queryBorrowsById(Integer borrowId) {
+        return borrowMapper.selectByPrimaryKey(borrowId);
     }
 
 }

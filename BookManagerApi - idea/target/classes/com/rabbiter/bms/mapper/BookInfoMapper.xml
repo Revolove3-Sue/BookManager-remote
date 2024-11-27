@@ -2,15 +2,15 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rabbiter.bms.mapper.BookInfoMapper">
   <resultMap id="BaseResultMap" type="com.rabbiter.bms.model.BookInfo">
-    <id column="bookId" jdbcType="INTEGER" property="bookid" />
-    <result column="bookName" jdbcType="VARCHAR" property="bookname" />
-    <result column="bookAuthor" jdbcType="VARCHAR" property="bookauthor" />
-    <result column="bookPrice" jdbcType="DECIMAL" property="bookprice" />
-    <result column="bookTypeId" jdbcType="INTEGER" property="booktypeid" />
-    <result column="bookTypeName" jdbcType="INTEGER" property="booktypename" />
-    <result column="bookDesc" jdbcType="VARCHAR" property="bookdesc" />
-    <result column="isBorrowed" jdbcType="TINYINT" property="isborrowed" />
-    <result column="bookImg" jdbcType="TINYINT" property="bookimg" />
+    <id column="bookId" jdbcType="INTEGER" property="bookId" />
+    <result column="bookName" jdbcType="VARCHAR" property="bookName" />
+    <result column="bookAuthor" jdbcType="VARCHAR" property="bookAuthor" />
+    <result column="bookPrice" jdbcType="DECIMAL" property="bookPrice" />
+    <result column="bookTypeId" jdbcType="INTEGER" property="bookTypeId" />
+    <result column="bookTypeName" jdbcType="INTEGER" property="bookTypeName" />
+    <result column="bookDesc" jdbcType="VARCHAR" property="bookDesc" />
+    <result column="isBorrowed" jdbcType="TINYINT" property="isBorrowed" />
+    <result column="bookImg" jdbcType="TINYINT" property="bookImg" />
   </resultMap>
   <sql id="Base_Column_List">
     bookId, bookName, bookAuthor, bookPrice, bookTypeId, bookDesc, isBorrowed, bookImg
@@ -19,112 +19,112 @@
     select 
     <include refid="Base_Column_List" />
     from book_info
-    where bookId = #{bookid,jdbcType=INTEGER}
+    where bookId = #{bookId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book_info
-    where bookId = #{bookid,jdbcType=INTEGER}
+    where bookId = #{bookId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.rabbiter.bms.model.BookInfo">
     insert into book_info (bookId, bookName, bookAuthor, 
       bookPrice, bookTypeId, bookDesc, 
       isBorrowed, bookImg)
-    values (#{bookid,jdbcType=INTEGER}, #{bookname,jdbcType=VARCHAR}, #{bookauthor,jdbcType=VARCHAR}, 
-      #{bookprice,jdbcType=DECIMAL}, #{booktypeid,jdbcType=INTEGER}, #{bookdesc,jdbcType=VARCHAR}, 
-      #{isborrowed,jdbcType=TINYINT}, #{bookimg,jdbcType=TINYINT})
+    values (#{bookId,jdbcType=INTEGER}, #{bookName,jdbcType=VARCHAR}, #{bookAuthor,jdbcType=VARCHAR}, 
+      #{bookPrice,jdbcType=DECIMAL}, #{bookTypeId,jdbcType=INTEGER}, #{bookDesc,jdbcType=VARCHAR}, 
+      #{isBorrowed,jdbcType=TINYINT}, #{bookImg,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.rabbiter.bms.model.BookInfo">
     insert into book_info
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="bookid != null">
+      <if test="bookId != null">
         bookId,
       </if>
-      <if test="bookname != null">
+      <if test="bookName != null">
         bookName,
       </if>
-      <if test="bookauthor != null">
+      <if test="bookAuthor != null">
         bookAuthor,
       </if>
-      <if test="bookprice != null">
+      <if test="bookPrice != null">
         bookPrice,
       </if>
-      <if test="booktypeid != null">
+      <if test="bookTypeId != null">
         bookTypeId,
       </if>
-      <if test="bookdesc != null">
+      <if test="bookDesc != null">
         bookDesc,
       </if>
-      <if test="isborrowed != null">
+      <if test="isBorrowed != null">
         isBorrowed,
       </if>
-      <if test="bookimg != null">
+      <if test="bookImg != null">
         bookImg,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="bookid != null">
-        #{bookid,jdbcType=INTEGER},
+      <if test="bookId != null">
+        #{bookId,jdbcType=INTEGER},
       </if>
-      <if test="bookname != null">
-        #{bookname,jdbcType=VARCHAR},
+      <if test="bookName != null">
+        #{bookName,jdbcType=VARCHAR},
       </if>
-      <if test="bookauthor != null">
-        #{bookauthor,jdbcType=VARCHAR},
+      <if test="bookAuthor != null">
+        #{bookAuthor,jdbcType=VARCHAR},
       </if>
-      <if test="bookprice != null">
-        #{bookprice,jdbcType=DECIMAL},
+      <if test="bookPrice != null">
+        #{bookPrice,jdbcType=DECIMAL},
       </if>
-      <if test="booktypeid != null">
-        #{booktypeid,jdbcType=INTEGER},
+      <if test="bookTypeId != null">
+        #{bookTypeId,jdbcType=INTEGER},
       </if>
-      <if test="bookdesc != null">
-        #{bookdesc,jdbcType=VARCHAR},
+      <if test="bookDesc != null">
+        #{bookDesc,jdbcType=VARCHAR},
       </if>
-      <if test="isborrowed != null">
-        #{isborrowed,jdbcType=TINYINT},
+      <if test="isBorrowed != null">
+        #{isBorrowed,jdbcType=TINYINT},
       </if>
-      <if test="bookimg != null">
-        #{bookimg,jdbcType=TINYINT},
+      <if test="bookImg != null">
+        #{bookImg,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.rabbiter.bms.model.BookInfo">
     update book_info
     <set>
-      <if test="bookname != null">
-        bookName = #{bookname,jdbcType=VARCHAR},
+      <if test="bookName != null">
+        bookName = #{bookName,jdbcType=VARCHAR},
       </if>
-      <if test="bookauthor != null">
-        bookAuthor = #{bookauthor,jdbcType=VARCHAR},
+      <if test="bookAuthor != null">
+        bookAuthor = #{bookAuthor,jdbcType=VARCHAR},
       </if>
-      <if test="bookprice != null">
-        bookPrice = #{bookprice,jdbcType=DECIMAL},
+      <if test="bookPrice != null">
+        bookPrice = #{bookPrice,jdbcType=DECIMAL},
       </if>
-      <if test="booktypeid != null">
-        bookTypeId = #{booktypeid,jdbcType=INTEGER},
+      <if test="bookTypeId != null">
+        bookTypeId = #{bookTypeId,jdbcType=INTEGER},
       </if>
-      <if test="bookdesc != null">
-        bookDesc = #{bookdesc,jdbcType=VARCHAR},
+      <if test="bookDesc != null">
+        bookDesc = #{bookDesc,jdbcType=VARCHAR},
       </if>
-      <if test="isborrowed != null">
-        isBorrowed = #{isborrowed,jdbcType=TINYINT},
+      <if test="isBorrowed != null">
+        isBorrowed = #{isBorrowed,jdbcType=TINYINT},
       </if>
-      <if test="bookimg != null">
-        bookImg = #{bookimg,jdbcType=TINYINT},
+      <if test="bookImg != null">
+        bookImg = #{bookImg,jdbcType=TINYINT},
       </if>
     </set>
-    where bookId = #{bookid,jdbcType=INTEGER}
+    where bookId = #{bookId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rabbiter.bms.model.BookInfo">
     update book_info
-    set bookName = #{bookname,jdbcType=VARCHAR},
-      bookAuthor = #{bookauthor,jdbcType=VARCHAR},
-      bookPrice = #{bookprice,jdbcType=DECIMAL},
-      bookTypeId = #{booktypeid,jdbcType=INTEGER},
-      bookDesc = #{bookdesc,jdbcType=VARCHAR},
-      isBorrowed = #{isborrowed,jdbcType=TINYINT},
-      bookImg = #{bookimg,jdbcType=TINYINT}
-    where bookId = #{bookid,jdbcType=INTEGER}
+    set bookName = #{bookName,jdbcType=VARCHAR},
+      bookAuthor = #{bookAuthor,jdbcType=VARCHAR},
+      bookPrice = #{bookPrice,jdbcType=DECIMAL},
+      bookTypeId = #{bookTypeId,jdbcType=INTEGER},
+      bookDesc = #{bookDesc,jdbcType=VARCHAR},
+      isBorrowed = #{isBorrowed,jdbcType=TINYINT},
+      bookImg = #{bookImg,jdbcType=TINYINT}
+    where bookId = #{bookId,jdbcType=INTEGER}
   </update>
   <select id="selectAllByLimit" resultMap="BaseResultMap">
     select bookId, bookName, bookAuthor,bookPrice, bookTypeId, bookDesc,isBorrowed, bookImg,
@@ -138,14 +138,14 @@
   <select id="selectCountBySearch" resultType="int">
     select count(*) from book_info
     <where>
-      <if test="bookname != null and bookname != '' ">
-        and bookName like concat('%',#{bookname},'%')
+      <if test="bookName != null and bookName != '' ">
+        and bookName like concat('%',#{bookName},'%')
       </if>
-      <if test="bookauthor != null and bookauthor != '' ">
-        and bookAuthor like concat('%',#{bookauthor},'%')
+      <if test="bookAuthor != null and bookAuthor != '' ">
+        and bookAuthor like concat('%',#{bookAuthor},'%')
       </if>
-      <if test="booktypeid != null and booktypeid != '' ">
-        and bookTypeId = #{booktypeid}
+      <if test="bookTypeId != null and bookTypeId != '' ">
+        and bookTypeId = #{bookTypeId}
       </if>
     </where>
   </select>
@@ -154,14 +154,14 @@
            (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
     from book_info
     <where>
-      <if test="bookname != null and bookname != '' ">
-        and bookName like concat('%',#{bookname},'%')
+      <if test="bookName != null and bookName != '' ">
+        and bookName like concat('%',#{bookName},'%')
       </if>
-      <if test="bookauthor != null and bookauthor != '' ">
-        and bookAuthor like concat('%',#{bookauthor},'%')
+      <if test="bookAuthor != null and bookAuthor != '' ">
+        and bookAuthor like concat('%',#{bookAuthor},'%')
       </if>
-      <if test="booktypeid != null and booktypeid != '' ">
-        and bookTypeId = #{booktypeid}
+      <if test="bookTypeId != null and bookTypeId != '' ">
+        and bookTypeId = #{bookTypeId}
       </if>
     </where>
     limit #{begin}, #{size}
@@ -174,8 +174,8 @@
   <select id="selectCountByType" resultType="int">
     select count(*) from book_info
     <where>
-      <if test="booktypeid != null and booktypeid != '' ">
-        and bookTypeId = #{booktypeid}
+      <if test="bookTypeId != null and bookTypeId != '' ">
+        and bookTypeId = #{bookTypeId}
       </if>
     </where>
   </select>
@@ -184,8 +184,8 @@
     (select bookTypeName from book_type where book_type.bookTypeId = book_info.bookTypeId) as bookTypeName
     from book_info
     <where>
-      <if test="booktypeid != null and booktypeid != '' ">
-        and bookTypeId = #{booktypeid}
+      <if test="bookTypeId != null and bookTypeId != '' ">
+        and bookTypeId = #{bookTypeId}
       </if>
     </where>
     limit #{begin}, #{size}

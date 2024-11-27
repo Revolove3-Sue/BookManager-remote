@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 public interface BookInfoMapper {
-    int deleteByPrimaryKey(Integer bookid);
+    int deleteByPrimaryKey(Integer bookId);
 
     int insert(BookInfo record);
 
     int insertSelective(BookInfo record);
 
-    BookInfo selectByPrimaryKey(Integer bookid);
+    BookInfo selectByPrimaryKey(Integer bookId);
 
     int updateByPrimaryKeySelective(BookInfo record);
 

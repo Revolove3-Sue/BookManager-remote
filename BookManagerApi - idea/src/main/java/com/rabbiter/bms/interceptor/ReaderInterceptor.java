@@ -16,7 +16,7 @@ public class ReaderInterceptor implements HandlerInterceptor {
         User user = (User) request.getSession().getAttribute("userObj");
 
         // 根据链式拦截关系，到这个拦截器肯定是登录过的。
-        if(user.getIsadmin() == 0) {    //如果是用户，则拦截
+        if(user.getIsAdmin() == 0) {    //如果是用户，则拦截
             System.out.println("读者不能进管理员界面!");
             // 重定向到登录界面
             response.sendRedirect(request.getContextPath() + "/index.html");

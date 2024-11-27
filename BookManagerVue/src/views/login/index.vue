@@ -19,16 +19,16 @@
                 <h3 class="title">登录图书管理系统</h3>
             </div>
             <!-- 用户名 -->
-            <el-form-item prop="username">
+            <el-form-item prop="userName">
                 <span class="svg-container">
                     <i class="el-icon-a-052" style="font-size: 24px"></i>
                 </span>
                 <el-input
                     class="yuan"
-                    ref="username"
-                    v-model="loginForm.username"
+                    ref="userName"
+                    v-model="loginForm.userName"
                     placeholder="请输入用户名"
-                    name="username"
+                    name="userName"
                     type="text"
                     tabindex="1"
                     auto-complete="on"
@@ -68,7 +68,7 @@
                     ></i>
                 </span>
                 <el-select
-                    v-model="loginForm.isadmin"
+                    v-model="loginForm.isAdmin"
                     placeholder="请选择"
                     style="width: 300px"
                 >
@@ -107,7 +107,7 @@
 export default {
     name: "Login",
     data() {
-        const validateUsername = (rule, value, callback) => {
+        const validateuserName = (rule, value, callback) => {
             callback();
         };
         const validatePassword = (rule, value, callback) => {
@@ -115,16 +115,16 @@ export default {
         };
         return {
             loginForm: {
-                username: "",
+                userName: "",
                 password: "",
-                isadmin: 0,
+                isAdmin: 0,
             },
             loginRules: {
-                username: [
+                userName: [
                     {
                         required: true,
                         trigger: "blur",
-                        validator: validateUsername,
+                        validator: validateuserName,
                     },
                 ],
                 password: [

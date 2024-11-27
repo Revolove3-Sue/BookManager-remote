@@ -4,7 +4,7 @@
         <div class="filter-container" style="margin-bottom: 15px">
             <!-- 类型名输入 -->
             <el-input
-                v-model="queryParam.booktypename"
+                v-model="queryParam.bookTypeName"
                 placeholder="类型名"
                 style="width: 200px"
                 class="filter-item"
@@ -66,14 +66,14 @@
                 ref="ruleForm"
                 label-width="80px"
             >
-                <el-form-item label="类型名称" prop="booktypename">
-                    <el-input v-model="form.booktypename"></el-input>
+                <el-form-item label="类型名称" prop="bookTypeName">
+                    <el-input v-model="form.bookTypeName"></el-input>
                 </el-form-item>
 
-                <el-form-item label="类型描述" prop="booktypedesc">
+                <el-form-item label="类型描述" prop="bookTypeDesc">
                     <el-input
                         type="textarea"
-                        v-model="form.booktypedesc"
+                        v-model="form.bookTypeDesc"
                     ></el-input>
                 </el-form-item>
             </el-form>
@@ -106,16 +106,16 @@
         >
             <el-table-column fixed type="selection" width="55">
             </el-table-column>
-            <el-table-column fixed prop="booktypeid" label="序号" width="100">
+            <el-table-column fixed prop="bookTypeId" label="序号" width="100">
             </el-table-column>
             <el-table-column
-                prop="booktypename"
+                prop="bookTypeName"
                 label="类型名称"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column
-                prop="booktypedesc"
+                prop="bookTypeDesc"
                 label="类型描述"
                 show-overflow-tooltip
             >
@@ -225,7 +225,7 @@ export default {
         // 显示全部
         handleShowAll() {
             this.queryParam.page = 1;
-            this.queryParam.booktypename = null;
+            this.queryParam.bookTypeName = null;
             queryBookTypesByPage(this.queryParam).then((res) => {
                 if (res.code === 0) {
                     this.tableData = res.data;
@@ -241,9 +241,9 @@ export default {
             this.formType = 0;
             // 将空数据置入form
             this.form = {
-                booktypeid: null,
-                booktypename: "",
-                booktypedesc: "",
+                bookTypeId: null,
+                bookTypeName: "",
+                bookTypeDesc: "",
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -255,9 +255,9 @@ export default {
             this.formType = 1;
             // 将行数据置入form
             this.form = {
-                booktypeid: row.booktypeid,
-                booktypename: row.booktypename,
-                booktypedesc: row.booktypedesc,
+                bookTypeId: row.bookTypeId,
+                bookTypeName: row.bookTypeName,
+                bookTypeDesc: row.bookTypeDesc,
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -365,7 +365,7 @@ export default {
             queryParam: {
                 page: 1,
                 limit: 10,
-                booktypename: null,
+                bookTypeName: null,
             },
             // 对话框表单显示
             dialogFormVisible: false,
@@ -373,19 +373,19 @@ export default {
             formType: 0,
             // 表单数据
             form: {
-                bookid: null,
-                booktypename: "",
-                booktypedesc: "",
+                bookId: null,
+                bookTypeName: "",
+                bookTypeDesc: "",
             },
             rules: {
-                booktypename: [
+                bookTypeName: [
                     {
                         required: true,
                         message: "请输入图书类型名称",
                         trigger: "blur",
                     },
                 ],
-                booktypedesc: [
+                bookTypeDesc: [
                     {
                         required: true,
                         message: "请输入图书类型描述",

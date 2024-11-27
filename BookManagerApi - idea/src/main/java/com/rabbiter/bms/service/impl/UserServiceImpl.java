@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User login(User user) {
-        return userMapper.selectByUsernameAndPasswordAndIsAdmin(user.getUsername(), user.getUserpassword(), user.getIsadmin());
+        return userMapper.selectByuserNameAndPasswordAndisAdmin(user.getUserName(), user.getUserPassword(), user.getIsAdmin());
     }
 
     @Override
@@ -52,22 +52,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Integer register(String username, String password) {
-        User tmp = userMapper.selectByUsername(username);
+    public Integer register(String userName, String password) {
+        User tmp = userMapper.selectByuserName(userName);
         if(tmp != null) return 0;  //账号重复
 
         User user = new User();
-        user.setUsername(username);
-        user.setUserpassword(password);
-        user.setIsadmin((byte)0);
+        user.setUserName(userName);
+        user.setUserPassword(password);
+        user.setIsAdmin((byte)0);
         return userMapper.insertSelective(user);
     }
 
     @Override
     public void setPassword(Integer id, String password) {
         User user = new User();
-        user.setUserid(id);
-        user.setUserpassword(password);
+        user.setUserId(id);
+        user.setUserPassword(password);
         userMapper.updateByPrimaryKeySelective(user);
     }
 
@@ -98,13 +98,13 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Integer deleteUser(User user) {
-        if(user.getUserid() == 1) return -2;
+        if(user.getUserId() == 1) return -2;
         Map<String, Object> map = new HashMap<>();
-        map.put("userid", user.getUserid());
+        map.put("userId", user.getUserId());
         if(borrowMapper.selectCountBySearch(map) > 0) {
             return -1;
         }
-        return userMapper.deleteByPrimaryKey(user.getUserid());
+        return userMapper.deleteByPrimaryKey(user.getUserId());
     }
 
     @Override

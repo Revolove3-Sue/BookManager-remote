@@ -3,93 +3,93 @@ package com.rabbiter.bms.model;
 import java.math.BigDecimal;
 
 public class BookInfo {
-    private Integer bookid;
+    private Integer bookId;
 
-    private String bookname;
+    private String bookName;
 
-    private String bookauthor;
+    private String bookAuthor;
 
-    private BigDecimal bookprice;
+    private BigDecimal bookPrice;
 
-    private Integer booktypeid;
+    private Integer bookTypeId;
 
-    private String booktypename;
+    private String bookTypeName;
 
-    private String bookdesc;
+    private String bookDesc;
 
-    private Byte isborrowed;
+    private Byte isBorrowed;
 
-    private String bookimg;
+    private String bookImg;
 
-    public Integer getBookid() {
-        return bookid;
+    public Integer getBookId() {
+        return bookId;
     }
 
-    public void setBookid(Integer bookid) {
-        this.bookid = bookid;
+    public void setBookId(Integer bookId) {
+        this.bookId = bookId;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public String getBookauthor() {
-        return bookauthor;
+    public String getBookAuthor() {
+        return bookAuthor;
     }
 
-    public void setBookauthor(String bookauthor) {
-        this.bookauthor = bookauthor;
+    public void setBookAuthor(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
 
-    public BigDecimal getBookprice() {
-        return bookprice;
+    public BigDecimal getBookPrice() {
+        return bookPrice;
     }
 
-    public void setBookprice(BigDecimal bookprice) {
-        this.bookprice = bookprice;
+    public void setBookPrice(BigDecimal bookPrice) {
+        this.bookPrice = bookPrice;
     }
 
-    public Integer getBooktypeid() {
-        return booktypeid;
+    public Integer getBookTypeId() {
+        return bookTypeId;
     }
 
-    public void setBooktypeid(Integer booktypeid) {
-        this.booktypeid = booktypeid;
+    public void setBookTypeId(Integer bookTypeId) {
+        this.bookTypeId = bookTypeId;
     }
 
-    public String getBooktypename() {
-        return booktypename;
+    public String getBookTypeName() {
+        return bookTypeName;
     }
 
-    public void setBooktypename(String booktypename) {
-        this.booktypename = booktypename;
+    public void setBookTypeName(String bookTypeName) {
+        this.bookTypeName = bookTypeName;
     }
 
-    public String getBookdesc() {
-        return bookdesc;
+    public String getBookDesc() {
+        return bookDesc;
     }
 
-    public void setBookdesc(String bookdesc) {
-        this.bookdesc = bookdesc;
+    public void setBookDesc(String bookDesc) {
+        this.bookDesc = bookDesc;
     }
 
-    public Byte getIsborrowed() {
-        return isborrowed;
+    public Byte getIsBorrowed() {
+        return isBorrowed;
     }
 
-    public void setIsborrowed(Byte isborrowed) {
-        this.isborrowed = isborrowed;
+    public void setIsBorrowed(Byte isBorrowed) {
+        this.isBorrowed = isBorrowed;
     }
 
-    public String getBookimg() {
-        return bookimg;
+    public String getBookImg() {
+        return bookImg;
     }
 
-    public void setBookimg(String bookimg) {
-        this.bookimg = bookimg;
+    public void setBookImg(String bookImg) {
+        this.bookImg = bookImg;
     }
 }

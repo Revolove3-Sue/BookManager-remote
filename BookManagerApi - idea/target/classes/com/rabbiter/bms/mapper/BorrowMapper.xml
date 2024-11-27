@@ -2,13 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rabbiter.bms.mapper.BorrowMapper">
   <resultMap id="BaseResultMap" type="com.rabbiter.bms.model.Borrow">
-    <id column="borrowId" jdbcType="INTEGER" property="borrowid" />
-    <result column="userId" jdbcType="INTEGER" property="userid" />
-    <result column="userName" jdbcType="INTEGER" property="username" />
-    <result column="bookId" jdbcType="INTEGER" property="bookid" />
-    <result column="bookName" jdbcType="INTEGER" property="bookname" />
-    <result column="borrowTime" jdbcType="TIMESTAMP" property="borrowtime" />
-    <result column="returnTime" jdbcType="TIMESTAMP" property="returntime" />
+    <id column="borrowId" jdbcType="INTEGER" property="borrowId" />
+    <result column="userId" jdbcType="INTEGER" property="userId" />
+    <result column="userName" jdbcType="INTEGER" property="userName" />
+    <result column="bookId" jdbcType="INTEGER" property="bookId" />
+    <result column="bookName" jdbcType="INTEGER" property="bookName" />
+    <result column="borrowTime" jdbcType="TIMESTAMP" property="borrowTime" />
+    <result column="returnTime" jdbcType="TIMESTAMP" property="returnTime" />
   </resultMap>
   <sql id="Base_Column_List">
     borrowId, userId, bookId, borrowTime, returnTime
@@ -17,80 +17,80 @@
     select 
     <include refid="Base_Column_List" />
     from borrow
-    where borrowId = #{borrowid,jdbcType=INTEGER}
+    where borrowId = #{borrowId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from borrow
-    where borrowId = #{borrowid,jdbcType=INTEGER}
+    where borrowId = #{borrowId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.rabbiter.bms.model.Borrow">
     insert into borrow (borrowId, userId, bookId, 
       borrowTime, returnTime)
-    values (#{borrowid,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{bookid,jdbcType=INTEGER}, 
-      #{borrowtime,jdbcType=TIMESTAMP}, #{returntime,jdbcType=TIMESTAMP})
+    values (#{borrowId,jdbcType=INTEGER}, #{userId,jdbcType=INTEGER}, #{bookId,jdbcType=INTEGER}, 
+      #{borrowTime,jdbcType=TIMESTAMP}, #{returnTime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.rabbiter.bms.model.Borrow">
     insert into borrow
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="borrowid != null">
+      <if test="borrowId != null">
         borrowId,
       </if>
-      <if test="userid != null">
+      <if test="userId != null">
         userId,
       </if>
-      <if test="bookid != null">
+      <if test="bookId != null">
         bookId,
       </if>
-      <if test="borrowtime != null">
+      <if test="borrowTime != null">
         borrowTime,
       </if>
-      <if test="returntime != null">
+      <if test="returnTime != null">
         returnTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="borrowid != null">
-        #{borrowid,jdbcType=INTEGER},
+      <if test="borrowId != null">
+        #{borrowId,jdbcType=INTEGER},
       </if>
-      <if test="userid != null">
-        #{userid,jdbcType=INTEGER},
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
       </if>
-      <if test="bookid != null">
-        #{bookid,jdbcType=INTEGER},
+      <if test="bookId != null">
+        #{bookId,jdbcType=INTEGER},
       </if>
-      <if test="borrowtime != null">
-        #{borrowtime,jdbcType=TIMESTAMP},
+      <if test="borrowTime != null">
+        #{borrowTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="returntime != null">
-        #{returntime,jdbcType=TIMESTAMP},
+      <if test="returnTime != null">
+        #{returnTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.rabbiter.bms.model.Borrow">
     update borrow
     <set>
-      <if test="userid != null">
-        userId = #{userid,jdbcType=INTEGER},
+      <if test="userId != null">
+        userId = #{userId,jdbcType=INTEGER},
       </if>
-      <if test="bookid != null">
-        bookId = #{bookid,jdbcType=INTEGER},
+      <if test="bookId != null">
+        bookId = #{bookId,jdbcType=INTEGER},
       </if>
-      <if test="borrowtime != null">
-        borrowTime = #{borrowtime,jdbcType=TIMESTAMP},
+      <if test="borrowTime != null">
+        borrowTime = #{borrowTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="returntime != null">
-        returnTime = #{returntime,jdbcType=TIMESTAMP},
+      <if test="returnTime != null">
+        returnTime = #{returnTime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where borrowId = #{borrowid,jdbcType=INTEGER}
+    where borrowId = #{borrowId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rabbiter.bms.model.Borrow">
     update borrow
-    set userId = #{userid,jdbcType=INTEGER},
-      bookId = #{bookid,jdbcType=INTEGER},
-      borrowTime = #{borrowtime,jdbcType=TIMESTAMP},
-      returnTime = #{returntime,jdbcType=TIMESTAMP}
-    where borrowId = #{borrowid,jdbcType=INTEGER}
+    set userId = #{userId,jdbcType=INTEGER},
+      bookId = #{bookId,jdbcType=INTEGER},
+      borrowTime = #{borrowTime,jdbcType=TIMESTAMP},
+      returnTime = #{returnTime,jdbcType=TIMESTAMP}
+    where borrowId = #{borrowId,jdbcType=INTEGER}
   </update>
   <select id="selectAllByLimit" resultMap="BaseResultMap">
     select borrowId, userId, bookId, borrowTime, returnTime,
@@ -109,41 +109,41 @@
     <if test="bookId != null and bookId != '' ">
       and borrow.bookId like concat('%',#{bookId},'%')
     </if>
-    <if test="username != null and username != '' ">
-      and userName like concat('%',#{username},'%')
+    <if test="userName != null and userName != '' ">
+      and userName like concat('%',#{userName},'%')
     </if>
-    <if test="bookname != null and bookname != '' ">
-      and bookName like concat('%',#{bookname},'%')
+    <if test="bookName != null and bookName != '' ">
+      and bookName like concat('%',#{bookName},'%')
     </if>
-    <if test="userid != null and userid != '' ">
-      and borrow.userId = #{userid}
+    <if test="userId != null and userId != '' ">
+      and borrow.userId = #{userId}
     </if>
   </select>
   <select id="selectBySearch" resultMap="BaseResultMap">
     select borrowId, borrow.userId, borrow.bookId, borrowTime, returnTime, userName, bookName
     from borrow, user, book_info
     where borrow.userId = user.userId and borrow.bookId = book_info.bookId
-    <if test="username != null and username != '' ">
-      and userName like concat('%',#{username},'%')
+    <if test="userName != null and userName != '' ">
+      and userName like concat('%',#{userName},'%')
     </if>
-    <if test="bookname != null and bookname != '' ">
-      and bookName like concat('%',#{bookname},'%')
+    <if test="bookName != null and bookName != '' ">
+      and bookName like concat('%',#{bookName},'%')
     </if>
-    <if test="userid != null and userid != '' ">
-      and borrow.userId = #{userid}
+    <if test="userId != null and userId != '' ">
+      and borrow.userId = #{userId}
     </if>
     limit #{begin}, #{size}
   </select>
   <select id="selectCountByReader" resultType="int">
     select count(*) from borrow
-    where userId = #{userid}
+    where userId = #{userId}
   </select>
   <select id="selectAllByLimitByReader" resultMap="BaseResultMap">
     select borrowId, userId, bookId, borrowTime, returnTime,
            (select userName from user where borrow.userId = user.userId) userName,
            (select bookName from book_info where borrow.bookId = book_info.bookId) bookName
     from borrow
-    where userId = #{userid}
+    where userId = #{userId}
     limit #{begin}, #{size}
   </select>
 </mapper>

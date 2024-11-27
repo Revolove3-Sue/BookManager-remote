@@ -31,8 +31,8 @@ public class BookInfoServiceImpl implements BookInfoService {
     }
 
     @Override
-    public BookInfo queryBookInfoById(Integer bookid) {
-        return bookInfoMapper.selectByPrimaryKey(bookid);
+    public BookInfo queryBookInfoById(Integer bookId) {
+        return bookInfoMapper.selectByPrimaryKey(bookId);
     }
 
     @Override
@@ -55,11 +55,11 @@ public class BookInfoServiceImpl implements BookInfoService {
         int count = 0;
         try{
             Map<String, Object> map = new HashMap<>();
-            map.put("bookId", bookInfo.getBookid());
+            map.put("bookId", bookInfo.getBookId());
             if(borrowMapper.selectCountBySearch(map) > 0) {
                 return -1;
             }
-            count = bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookid());
+            count = bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookId());
         } catch (Exception e) {
             e.printStackTrace();
         }

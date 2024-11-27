@@ -29,7 +29,7 @@ public class BookTypeController {
         return bookTypeService.queryBookTypes();
     }
 
-    // 分页查询图书类型 params: {page, limit, booktypename}
+    // 分页查询图书类型 params: {page, limit, bookTypeName}
     @GetMapping(value = "/queryBookTypesByPage")
     public Map<String, Object> queryBookTypesByPage(@RequestParam Map<String, Object> params){
         MyUtils.parsePageParams(params);

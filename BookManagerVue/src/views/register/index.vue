@@ -13,15 +13,15 @@
                 <h3 class="title">注册新账号</h3>
             </div>
             <!-- 用户名 -->
-            <el-form-item prop="username">
+            <el-form-item prop="userName">
                 <span class="svg-container">
                     <i class="el-icon-a-052" style="font-size: 24px;"></i>
                 </span>
                 <el-input
-                    ref="username"
-                    v-model="loginForm.username"
+                    ref="userName"
+                    v-model="loginForm.userName"
                     placeholder="请输入用户名"
-                    name="username"
+                    name="userName"
                     type="text"
                     tabindex="1"
                     auto-complete="on"
@@ -98,12 +98,12 @@ export default {
         };
         return {
             loginForm: {
-                username: "",
+                userName: "",
                 password: "",
                 repeat: "",
             },
             loginRules: {
-                username: [
+                userName: [
                     {
                         required: true,
                         message: "请输入用户名",
@@ -130,7 +130,7 @@ export default {
             this.$refs.loginForm.validate((valid) => {
                 if (valid) {
                     register({
-                        username: this.loginForm.username,
+                        userName: this.loginForm.userName,
                         password: this.loginForm.password,
                     }).then((res) => {
                         if (res === 0) {

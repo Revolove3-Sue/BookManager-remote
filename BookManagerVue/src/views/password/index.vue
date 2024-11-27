@@ -78,12 +78,12 @@ export default {
     onSubmit() {
       this.$refs.form.validate((valid) => {
         if (valid) {
-          const isadmin = this.roles[0] === "admin" ? 1 : 0;
-          console.log(isadmin);
+          const isAdmin = this.roles[0] === "admin" ? 1 : 0;
+          console.log(isAdmin);
           alterPassword({
-            userid: this.id,
-            username: this.name,
-            isadmin: isadmin,
+            userId: this.id,
+            userName: this.name,
+            isAdmin: isAdmin,
             oldPassword: this.form.oldPassword,
             newPassword: this.form.newPassword,
           }).then((res) => {

@@ -38,9 +38,9 @@ const mutations = {
 const actions = {
   // user login
   login({ commit }, userInfo) {
-    const { username, password, isadmin } = userInfo
+    const { userName, password, isAdmin } = userInfo
     return new Promise((resolve, reject) => {
-      login({ username: username.trim(), userpassword: password, isadmin: isadmin }).then(response => {
+      login({ userName: userName.trim(), userPassword: password, isAdmin: isAdmin }).then(response => {
         const { status, message, data } = response
         
         if(status !== 200) {
@@ -67,23 +67,23 @@ const actions = {
         }
 
         data['avatar'] = '/pic/02.jpg'
-        if (data.isadmin === 1){
+        if (data.isAdmin === 1){
           data['roles'] = ['admin']
           data['avatar'] = '/pic/05.jpg'
         }
         else data['roles'] = ['reader']
 
 
-        const { userid, roles, username, avatar } = data
+        const { userId, roles, userName, avatar } = data
 
         // roles must be a non-empty array
         if (!roles || roles.length <= 0) {
           reject('getInfo: roles 必须是非空数组!')
         }
 
-        commit('SET_ID', userid)
+        commit('SET_ID', userId)
         commit('SET_ROLES', roles)
-        commit('SET_NAME', username)
+        commit('SET_NAME', userName)
         commit('SET_AVATAR', avatar)
         resolve(data)
       }).catch(error => {

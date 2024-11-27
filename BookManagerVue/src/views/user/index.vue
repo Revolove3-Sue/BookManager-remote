@@ -4,7 +4,7 @@
         <div class="filter-container" style="margin-bottom: 15px">
             <!-- 用户名输入 -->
             <el-input
-                v-model="queryParam.username"
+                v-model="queryParam.userName"
                 placeholder="用户名"
                 style="width: 200px"
                 class="filter-item"
@@ -65,19 +65,19 @@
                 ref="ruleForm"
                 label-width="80px"
             >
-                <el-form-item label="用户名称" prop="username">
-                    <el-input v-model="form.username"></el-input>
+                <el-form-item label="用户名称" prop="userName">
+                    <el-input v-model="form.userName"></el-input>
                 </el-form-item>
 
-                <el-form-item label="用户密码" prop="userpassword">
-                    <el-input v-model="form.userpassword"></el-input>
+                <el-form-item label="用户密码" prop="userPassword">
+                    <el-input v-model="form.userPassword"></el-input>
                 </el-form-item>
 
-                <el-form-item label="身份" prop="isadmin">
-                    <el-radio v-model="form.isadmin" :label="1"
+                <el-form-item label="身份" prop="isAdmin">
+                    <el-radio v-model="form.isAdmin" :label="1"
                         >管理员</el-radio
                     >
-                    <el-radio v-model="form.isadmin" :label="0">读者</el-radio>
+                    <el-radio v-model="form.isAdmin" :label="0">读者</el-radio>
                 </el-form-item>
             </el-form>
 
@@ -109,23 +109,23 @@
         >
             <el-table-column fixed type="selection" width="55">
             </el-table-column>
-            <el-table-column fixed prop="userid" label="序号" width="100">
+            <el-table-column fixed prop="userId" label="序号" width="100">
             </el-table-column>
             <el-table-column
-                prop="username"
+                prop="userName"
                 label="用户名称"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column
-                prop="userpassword"
+                prop="userPassword"
                 label="用户密码"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column label="用户身份" show-overflow-tooltip>
                 <template slot-scope="scope">
-                    <el-tag v-if="scope.row.isadmin === 1" type="warning"
+                    <el-tag v-if="scope.row.isAdmin === 1" type="warning"
                         >管理员</el-tag
                     >
                     <el-tag v-else type="success">读者</el-tag>
@@ -237,7 +237,7 @@ export default {
         // 显示全部
         handleShowAll() {
             this.queryParam.page = 1;
-            this.queryParam.username = null;
+            this.queryParam.userName = null;
             queryUsersByPage(this.queryParam).then((res) => {
                 if (res.code === 0) {
                     this.tableData = res.data;
@@ -253,10 +253,10 @@ export default {
             this.formType = 0;
             // 将空数据置入form
             this.form = {
-                userid: null,
-                username: "",
-                userpassword: "",
-                isadmin: 1,
+                userId: null,
+                userName: "",
+                userPassword: "",
+                isAdmin: 1,
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -268,10 +268,10 @@ export default {
             this.formType = 1;
             // 将行数据置入form
             this.form = {
-                userid: row.userid,
-                username: row.username,
-                userpassword: row.userpassword,
-                isadmin: row.isadmin,
+                userId: row.userId,
+                userName: row.userName,
+                userPassword: row.userPassword,
+                isAdmin: row.isAdmin,
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -378,7 +378,7 @@ export default {
             queryParam: {
                 page: 1,
                 limit: 10,
-                username: null,
+                userName: null,
             },
             // 对话框表单显示
             dialogFormVisible: false,
@@ -386,20 +386,20 @@ export default {
             formType: 0,
             // 表单数据
             form: {
-                userid: null,
-                username: "",
-                userpassword: "",
-                isadmin: 1,
+                userId: null,
+                userName: "",
+                userPassword: "",
+                isAdmin: 1,
             },
             rules: {
-                username: [
+                userName: [
                     {
                         required: true,
                         message: "请输入用户名",
                         trigger: "blur",
                     },
                 ],
-                userpassword: [
+                userPassword: [
                     {
                         required: true,
                         message: "请输入用户密码",

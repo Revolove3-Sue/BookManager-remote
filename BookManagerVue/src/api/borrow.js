@@ -62,25 +62,25 @@ export function updateBorrow(data) {
 }
 
 // 借书
-export function borrowBook(userid, bookid) {
+export function borrowBook(userId, bookId) {
     return request({
         url: '/borrow/borrowBook',
         method: 'post',
         params: {
-            userid,
-            bookid
+            userId,
+            bookId
         }
     })
 }
 
 // 还书
-export function returnBook(borrowid, bookid) {
+export function returnBook(borrowId, bookId) {
     return request({
         url: '/borrow/returnBook',
         method: 'post',
         params: {
-            borrowid,
-            bookid
+            borrowId,
+            bookId
         }
     })
 }

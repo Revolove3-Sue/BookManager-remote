@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Map;
 
 public interface BorrowMapper {
-    int deleteByPrimaryKey(Integer borrowid);
+    int deleteByPrimaryKey(Integer borrowId);
 
     int insert(Borrow record);
 
     int insertSelective(Borrow record);
 
-    Borrow selectByPrimaryKey(Integer borrowid);
+    Borrow selectByPrimaryKey(Integer borrowId);
 
     int updateByPrimaryKeySelective(Borrow record);
 
@@ -27,7 +27,7 @@ public interface BorrowMapper {
 
     List<Borrow> selectBySearch(Map<String, Object> searchParam);
 
-    Integer selectCountByReader(Integer userid);
+    Integer selectCountByReader(Integer userId);
 
-    List<Borrow> selectAllByLimitByReader(@Param("begin") Integer begin, @Param("size") Integer size, @Param("userid") Integer userid);
+    List<Borrow> selectAllByLimitByReader(@Param("begin") Integer begin, @Param("size") Integer size, @Param("userId") Integer userId);
 }

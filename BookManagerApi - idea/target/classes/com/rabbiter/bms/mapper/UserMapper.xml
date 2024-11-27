@@ -2,10 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rabbiter.bms.mapper.UserMapper">
   <resultMap id="BaseResultMap" type="com.rabbiter.bms.model.User">
-    <id column="userId" jdbcType="INTEGER" property="userid" />
-    <result column="userName" jdbcType="VARCHAR" property="username" />
-    <result column="userPassword" jdbcType="VARCHAR" property="userpassword" />
-    <result column="isAdmin" jdbcType="TINYINT" property="isadmin" />
+    <id column="userId" jdbcType="INTEGER" property="userId" />
+    <result column="userName" jdbcType="VARCHAR" property="userName" />
+    <result column="userPassword" jdbcType="VARCHAR" property="userPassword" />
+    <result column="isAdmin" jdbcType="TINYINT" property="isAdmin" />
   </resultMap>
   <sql id="Base_Column_List">
     userId, userName, userPassword, isAdmin
@@ -14,85 +14,85 @@
     select 
     <include refid="Base_Column_List" />
     from user
-    where userId = #{userid,jdbcType=INTEGER}
+    where userId = #{userId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from user
-    where userId = #{userid,jdbcType=INTEGER}
+    where userId = #{userId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.rabbiter.bms.model.User">
     insert into user (userId, userName, userPassword, 
       isAdmin)
-    values (#{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{userpassword,jdbcType=VARCHAR}, 
-      #{isadmin,jdbcType=TINYINT})
+    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPassword,jdbcType=VARCHAR}, 
+      #{isAdmin,jdbcType=TINYINT})
   </insert>
   <insert id="insertSelective" parameterType="com.rabbiter.bms.model.User">
     insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
+      <if test="userId != null">
         userId,
       </if>
-      <if test="username != null">
+      <if test="userName != null">
         userName,
       </if>
-      <if test="userpassword != null">
+      <if test="userPassword != null">
         userPassword,
       </if>
-      <if test="isadmin != null">
+      <if test="isAdmin != null">
         isAdmin,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="userid != null">
-        #{userid,jdbcType=INTEGER},
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
       </if>
-      <if test="username != null">
-        #{username,jdbcType=VARCHAR},
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="userpassword != null">
-        #{userpassword,jdbcType=VARCHAR},
+      <if test="userPassword != null">
+        #{userPassword,jdbcType=VARCHAR},
       </if>
-      <if test="isadmin != null">
-        #{isadmin,jdbcType=TINYINT},
+      <if test="isAdmin != null">
+        #{isAdmin,jdbcType=TINYINT},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.rabbiter.bms.model.User">
     update user
     <set>
-      <if test="username != null">
-        userName = #{username,jdbcType=VARCHAR},
+      <if test="userName != null">
+        userName = #{userName,jdbcType=VARCHAR},
       </if>
-      <if test="userpassword != null">
-        userPassword = #{userpassword,jdbcType=VARCHAR},
+      <if test="userPassword != null">
+        userPassword = #{userPassword,jdbcType=VARCHAR},
       </if>
-      <if test="isadmin != null">
-        isAdmin = #{isadmin,jdbcType=TINYINT},
+      <if test="isAdmin != null">
+        isAdmin = #{isAdmin,jdbcType=TINYINT},
       </if>
     </set>
-    where userId = #{userid,jdbcType=INTEGER}
+    where userId = #{userId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rabbiter.bms.model.User">
     update user
-    set userName = #{username,jdbcType=VARCHAR},
-      userPassword = #{userpassword,jdbcType=VARCHAR},
-      isAdmin = #{isadmin,jdbcType=TINYINT}
-    where userId = #{userid,jdbcType=INTEGER}
+    set userName = #{userName,jdbcType=VARCHAR},
+      userPassword = #{userPassword,jdbcType=VARCHAR},
+      isAdmin = #{isAdmin,jdbcType=TINYINT}
+    where userId = #{userId,jdbcType=INTEGER}
   </update>
-  <select id="selectByUsernameAndPasswordAndIsAdmin" resultMap="BaseResultMap">
+  <select id="selectByuserNameAndPasswordAndisAdmin" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from user
-    where userName = #{username}
+    where userName = #{userName}
       and userPassword = #{password}
       and isAdmin = #{isAdmin}
     limit 1
   </select>
-  <select id="selectByUsername" resultMap="BaseResultMap">
+  <select id="selectByuserName" resultMap="BaseResultMap">
     select
     <include refid="Base_Column_List" />
     from user
-    where userName = #{username}
+    where userName = #{userName}
     limit 1
   </select>
   <select id="selectAllByLimit" resultMap="BaseResultMap">
@@ -110,8 +110,8 @@
   <select id="selectCountBySearch" resultType="int">
     select count(*) from user
     <where>
-      <if test="username != null and username != '' ">
-        and userName like concat('%',#{username},'%')
+      <if test="userName != null and userName != '' ">
+        and userName like concat('%',#{userName},'%')
       </if>
     </where>
   </select>
@@ -119,8 +119,8 @@
     select userId, userName, userPassword, isAdmin
     from user
     <where>
-      <if test="username != null and username != '' ">
-        and userName like concat('%',#{username},'%')
+      <if test="userName != null and userName != '' ">
+        and userName like concat('%',#{userName},'%')
       </if>
     </where>
     limit #{begin}, #{size}

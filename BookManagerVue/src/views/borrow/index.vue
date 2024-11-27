@@ -5,7 +5,7 @@
             <!-- 用户名输入 -->
             <el-input
                 v-permission="['admin']"
-                v-model="queryParam.username"
+                v-model="queryParam.userName"
                 placeholder="用户名"
                 style="width: 200px"
                 class="filter-item"
@@ -13,7 +13,7 @@
             />
             <!-- 图书名输入 -->
             <el-input
-                v-model="queryParam.bookname"
+                v-model="queryParam.bookName"
                 placeholder="图书名"
                 style="width: 200px"
                 class="filter-item"
@@ -62,41 +62,41 @@
         >
             <el-table-column fixed type="selection" width="55">
             </el-table-column>
-            <el-table-column fixed prop="borrowid" label="序号" width="100">
+            <el-table-column fixed prop="borrowId" label="序号" width="100">
             </el-table-column>
             <el-table-column
-                prop="username"
+                prop="userName"
                 label="用户名"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column
-                prop="bookname"
+                prop="bookName"
                 label="图书名"
                 show-overflow-tooltip
             >
             </el-table-column>
-            <el-table-column prop="borrowtimestr" label="借书时间">
+            <el-table-column prop="borrowTimeStr" label="借书时间">
             </el-table-column>
             <el-table-column label="还书时间" >
                 <template slot-scope="scope">
                     <span
                         v-if="
-                            scope.row.returntimestr === null ||
-                            scope.row.returntimestr === ''
+                            scope.row.returnTimeStr === null ||
+                            scope.row.returnTimeStr === ''
                         "
                         style="color: red"
                         >等待还书</span
                     >
                     <span v-else style="color: #1aac1a">{{
-                        scope.row.returntimestr
+                        scope.row.returnTimeStr
                     }}</span>
                 </template>
             </el-table-column>
             <el-table-column
                 fixed="right"
                 label="操作"
-                :width="roleIsAdmin ? '320px' : '180px'"
+                :width="roleisAdmin ? '320px' : '180px'"
             >
                 <template slot-scope="scope">
                     <el-button
@@ -110,8 +110,8 @@
                     >
                     <el-button
                         v-if="
-                            scope.row.returntimestr === null ||
-                            scope.row.returntimestr === ''
+                            scope.row.returnTimeStr === null ||
+                            scope.row.returnTimeStr === ''
                         "
                         @click="handleReturn(scope.row, scope.$index)"
                         type="success"
@@ -209,8 +209,8 @@ export default {
         // 显示全部
         handleShowAll() {
             this.queryParam.page = 1;
-            this.queryParam.username = null;
-            this.queryParam.bookname = null;
+            this.queryParam.userName = null;
+            this.queryParam.bookName = null;
             queryBorrowsByPage(this.queryParam).then((res) => {
                 if (res.code === 0) {
                     this.tableData = res.data;
@@ -278,7 +278,7 @@ export default {
                 cancelButtonText: "取消",
                 type: "warning",
             }).then(() => {
-                returnBook(row.borrowid, row.bookid).then((res) => {
+                returnBook(row.borrowId, row.bookId).then((res) => {
                     if (res === 1) {
                         this.$message.success("还书成功");
                         this.handleCurrentChange(this.queryParam.page);
@@ -298,7 +298,7 @@ export default {
         //     cancelButtonText: '取消',
         //     type: 'warning'
         //   }).then(() => {
-        //     returnBook(row.borrowid, row.bookid).then(res => {
+        //     returnBook(row.borrowId, row.bookId).then(res => {
         //       if(res === 1) {
         //         this.$message.success('还书成功')
         //         this.handleCurrentChange(this.queryParam.page)
@@ -322,28 +322,28 @@ export default {
             queryParam: {
                 page: 1,
                 limit: 10,
-                userid: null,
-                username: null,
-                bookname: null,
+                userId: null,
+                userName: null,
+                bookName: null,
             },
         };
     },
     computed: {
         // 获得user信息
         ...mapGetters(["id", "name", "roles"]),
-        roleIsAdmin() {
+        roleisAdmin() {
             if (this.roles[0] === "admin") return true;
             else return false;
         },
     },
     watch: {
-        "queryParam.userid": {
+        "queryParam.userId": {
             immediate: true,
             handler() {
-                if (this.roleIsAdmin) {
-                    this.queryParam.userid = null;
+                if (this.roleisAdmin) {
+                    this.queryParam.userId = null;
                 } else {
-                    this.queryParam.userid = this.id;
+                    this.queryParam.userId = this.id;
                 }
             },
         },

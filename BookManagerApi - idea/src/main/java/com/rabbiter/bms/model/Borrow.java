@@ -3,93 +3,93 @@ package com.rabbiter.bms.model;
 import java.util.Date;
 
 public class Borrow {
-    private Integer borrowid;
+    private Integer borrowId;
 
-    private Integer userid;
+    private Integer userId;
 
-    private String username;
+    private String userName;
 
-    private Integer bookid;
+    private Integer bookId;
 
-    private String bookname;
+    private String bookName;
 
-    private Date borrowtime;
+    private Date borrowTime;
 
-    private String borrowtimestr;
+    private String borrowTimeStr;
 
-    private Date returntime;
+    private Date returnTime;
 
-    private String returntimestr;
+    private String returnTimeStr;
 
-    public Integer getBorrowid() {
-        return borrowid;
+    public Integer getBorrowId() {
+        return borrowId;
     }
 
-    public void setBorrowid(Integer borrowid) {
-        this.borrowid = borrowid;
+    public void setBorrowId(Integer borrowId) {
+        this.borrowId = borrowId;
     }
 
-    public Integer getUserid() {
-        return userid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public Integer getBookid() {
-        return bookid;
+    public Integer getBookId() {
+        return bookId;
     }
 
-    public void setBookid(Integer bookid) {
-        this.bookid = bookid;
+    public void setBookId(Integer bookId) {
+        this.bookId = bookId;
     }
 
-    public String getBookname() {
-        return bookname;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setBookname(String bookname) {
-        this.bookname = bookname;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public Date getBorrowtime() {
-        return borrowtime;
+    public Date getBorrowTime() {
+        return borrowTime;
     }
 
-    public void setBorrowtime(Date borrowtime) {
-        this.borrowtime = borrowtime;
+    public void setBorrowTime(Date borrowTime) {
+        this.borrowTime = borrowTime;
     }
 
-    public String getBorrowtimestr() {
-        return borrowtimestr;
+    public String getBorrowTimeStr() {
+        return borrowTimeStr;
     }
 
-    public void setBorrowtimestr(String borrowtimestr) {
-        this.borrowtimestr = borrowtimestr;
+    public void setBorrowTimeStr(String borrowTimeStr) {
+        this.borrowTimeStr = borrowTimeStr;
     }
 
-    public Date getReturntime() {
-        return returntime;
+    public Date getReturnTime() {
+        return returnTime;
     }
 
-    public void setReturntime(Date returntime) {
-        this.returntime = returntime;
+    public void setReturnTime(Date returnTime) {
+        this.returnTime = returnTime;
     }
 
-    public String getReturntimestr() {
-        return returntimestr;
+    public String getReturnTimeStr() {
+        return returnTimeStr;
     }
 
-    public void setReturntimestr(String returntimestr) {
-        this.returntimestr = returntimestr;
+    public void setReturnTimeStr(String returnTimeStr) {
+        this.returnTimeStr = returnTimeStr;
     }
 }

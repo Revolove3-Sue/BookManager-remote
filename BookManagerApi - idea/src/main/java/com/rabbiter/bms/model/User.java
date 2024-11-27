@@ -3,43 +3,43 @@ package com.rabbiter.bms.model;
 import java.io.Serializable;
 
 public class User implements Serializable {
-    private Integer userid;
+    private Integer userId;
 
-    private String username;
+    private String userName;
 
-    private String userpassword;
+    private String userPassword;
 
-    private Byte isadmin;
+    private Byte isAdmin;
 
-    public Integer getUserid() {
-        return userid;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setUserid(Integer userid) {
-        this.userid = userid;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getUserpassword() {
-        return userpassword;
+    public String getUserPassword() {
+        return userPassword;
     }
 
-    public void setUserpassword(String userpassword) {
-        this.userpassword = userpassword;
+    public void setUserPassword(String userPassword) {
+        this.userPassword = userPassword;
     }
 
-    public Byte getIsadmin() {
-        return isadmin;
+    public Byte getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setIsadmin(Byte isadmin) {
-        this.isadmin = isadmin;
+    public void setIsAdmin(Byte isAdmin) {
+        this.isAdmin = isAdmin;
     }
 }

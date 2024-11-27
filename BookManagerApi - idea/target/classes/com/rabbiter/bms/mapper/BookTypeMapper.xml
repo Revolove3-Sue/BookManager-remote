@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.rabbiter.bms.mapper.BookTypeMapper">
   <resultMap id="BaseResultMap" type="com.rabbiter.bms.model.BookType">
-    <id column="bookTypeId" jdbcType="INTEGER" property="booktypeid" />
-    <result column="bookTypeName" jdbcType="VARCHAR" property="booktypename" />
-    <result column="bookTypeDesc" jdbcType="VARCHAR" property="booktypedesc" />
+    <id column="bookTypeId" jdbcType="INTEGER" property="bookTypeId" />
+    <result column="bookTypeName" jdbcType="VARCHAR" property="bookTypeName" />
+    <result column="bookTypeDesc" jdbcType="VARCHAR" property="bookTypeDesc" />
   </resultMap>
   <sql id="Base_Column_List">
     bookTypeId, bookTypeName, bookTypeDesc
@@ -13,60 +13,60 @@
     select 
     <include refid="Base_Column_List" />
     from book_type
-    where bookTypeId = #{booktypeid,jdbcType=INTEGER}
+    where bookTypeId = #{bookTypeId,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book_type
-    where bookTypeId = #{booktypeid,jdbcType=INTEGER}
+    where bookTypeId = #{bookTypeId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.rabbiter.bms.model.BookType">
     insert into book_type (bookTypeId, bookTypeName, bookTypeDesc
       )
-    values (#{booktypeid,jdbcType=INTEGER}, #{booktypename,jdbcType=VARCHAR}, #{booktypedesc,jdbcType=VARCHAR}
+    values (#{bookTypeId,jdbcType=INTEGER}, #{bookTypeName,jdbcType=VARCHAR}, #{bookTypeDesc,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.rabbiter.bms.model.BookType">
     insert into book_type
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="booktypeid != null">
+      <if test="bookTypeId != null">
         bookTypeId,
       </if>
-      <if test="booktypename != null">
+      <if test="bookTypeName != null">
         bookTypeName,
       </if>
-      <if test="booktypedesc != null">
+      <if test="bookTypeDesc != null">
         bookTypeDesc,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="booktypeid != null">
-        #{booktypeid,jdbcType=INTEGER},
+      <if test="bookTypeId != null">
+        #{bookTypeId,jdbcType=INTEGER},
       </if>
-      <if test="booktypename != null">
-        #{booktypename,jdbcType=VARCHAR},
+      <if test="bookTypeName != null">
+        #{bookTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="booktypedesc != null">
-        #{booktypedesc,jdbcType=VARCHAR},
+      <if test="bookTypeDesc != null">
+        #{bookTypeDesc,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.rabbiter.bms.model.BookType">
     update book_type
     <set>
-      <if test="booktypename != null">
-        bookTypeName = #{booktypename,jdbcType=VARCHAR},
+      <if test="bookTypeName != null">
+        bookTypeName = #{bookTypeName,jdbcType=VARCHAR},
       </if>
-      <if test="booktypedesc != null">
-        bookTypeDesc = #{booktypedesc,jdbcType=VARCHAR},
+      <if test="bookTypeDesc != null">
+        bookTypeDesc = #{bookTypeDesc,jdbcType=VARCHAR},
       </if>
     </set>
-    where bookTypeId = #{booktypeid,jdbcType=INTEGER}
+    where bookTypeId = #{bookTypeId,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.rabbiter.bms.model.BookType">
     update book_type
-    set bookTypeName = #{booktypename,jdbcType=VARCHAR},
-      bookTypeDesc = #{booktypedesc,jdbcType=VARCHAR}
-    where bookTypeId = #{booktypeid,jdbcType=INTEGER}
+    set bookTypeName = #{bookTypeName,jdbcType=VARCHAR},
+      bookTypeDesc = #{bookTypeDesc,jdbcType=VARCHAR}
+    where bookTypeId = #{bookTypeId,jdbcType=INTEGER}
   </update>
   <select id="selectAllByLimit" resultMap="BaseResultMap">
     select <include refid="Base_Column_List" />
@@ -83,8 +83,8 @@
   <select id="selectCountBySearch" resultType="int">
     select count(*) from book_type
     <where>
-      <if test="booktypename != null and booktypename != '' ">
-        and bookTypeName like concat('%',#{booktypename},'%')
+      <if test="bookTypeName != null and bookTypeName != '' ">
+        and bookTypeName like concat('%',#{bookTypeName},'%')
       </if>
     </where>
   </select>
@@ -92,8 +92,8 @@
     select bookTypeId, bookTypeName, bookTypeDesc
     from book_type
     <where>
-      <if test="booktypename != null and booktypename != '' ">
-        and bookTypeName like concat('%',#{booktypename},'%')
+      <if test="bookTypeName != null and bookTypeName != '' ">
+        and bookTypeName like concat('%',#{bookTypeName},'%')
       </if>
     </where>
     limit #{begin}, #{size}

@@ -1,10 +1,10 @@
-import { validUsername, isExternal } from '@/utils/validate.js'
+import { validuserName, isExternal } from '@/utils/validate.js'
 
 describe('Utils:validate', () => {
-  it('validUsername', () => {
-    expect(validUsername('admin')).toBe(true)
-    expect(validUsername('editor')).toBe(true)
-    expect(validUsername('xxxx')).toBe(false)
+  it('validuserName', () => {
+    expect(validuserName('admin')).toBe(true)
+    expect(validuserName('editor')).toBe(true)
+    expect(validuserName('xxxx')).toBe(false)
   })
   it('isExternal', () => {
     expect(isExternal('https://github.com/PanJiaChen/vue-element-admin')).toBe(true)

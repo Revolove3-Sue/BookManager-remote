@@ -4,7 +4,7 @@
         <div class="filter-container" style="margin-bottom: 15px">
             <!-- 书名输入 -->
             <el-input
-                v-model="queryParam.bookname"
+                v-model="queryParam.bookName"
                 placeholder="书名"
                 style="width: 200px"
                 class="filter-item"
@@ -12,7 +12,7 @@
             />
             <!-- 作者输入 -->
             <el-input
-                v-model="queryParam.bookauthor"
+                v-model="queryParam.bookAuthor"
                 placeholder="作者"
                 style="width: 200px"
                 class="filter-item"
@@ -20,7 +20,7 @@
             />
             <!-- 类型选择 -->
             <el-select
-                v-model="queryParam.booktypeid"
+                v-model="queryParam.bookTypeId"
                 filterable
                 placeholder="类型"
                 clearable
@@ -29,9 +29,9 @@
             >
                 <el-option
                     v-for="item in typeData"
-                    :key="item.booktypeid"
-                    :label="item.booktypename"
-                    :value="item.booktypeid"
+                    :key="item.bookTypeId"
+                    :label="item.bookTypeName"
+                    :value="item.bookTypeId"
                 />
             </el-select>
             <!-- 一些按钮 -->
@@ -93,37 +93,37 @@
                         ref="ruleForm"
                         label-width="80px"
                     >
-                        <el-form-item label="图书名称" prop="bookname">
-                            <el-input v-model="form.bookname"></el-input>
+                        <el-form-item label="图书名称" prop="bookName">
+                            <el-input v-model="form.bookName"></el-input>
                         </el-form-item>
 
-                        <el-form-item label="作者" prop="bookauthor">
-                            <el-input v-model="form.bookauthor"></el-input>
+                        <el-form-item label="作者" prop="bookAuthor">
+                            <el-input v-model="form.bookAuthor"></el-input>
                         </el-form-item>
 
-                        <el-form-item label="价格" prop="bookprice">
-                            <el-input v-model="form.bookprice"></el-input>
+                        <el-form-item label="价格" prop="bookPrice">
+                            <el-input v-model="form.bookPrice"></el-input>
                         </el-form-item>
 
-                        <el-form-item label="图书类型" prop="booktypeid">
+                        <el-form-item label="图书类型" prop="bookTypeId">
                             <el-select
-                                v-model="form.booktypeid"
+                                v-model="form.bookTypeId"
                                 placeholder="请选择类型"
                             >
                                 <el-option
                                     v-for="item in typeData"
-                                    :key="item.booktypeid"
-                                    :label="item.booktypename"
-                                    :value="item.booktypeid"
+                                    :key="item.bookTypeId"
+                                    :label="item.bookTypeName"
+                                    :value="item.bookTypeId"
                                 >
                                 </el-option>
                             </el-select>
                         </el-form-item>
 
-                        <el-form-item label="书籍描述" prop="bookdesc">
+                        <el-form-item label="书籍描述" prop="bookDesc">
                             <el-input
                                 type="textarea"
-                                v-model="form.bookdesc"
+                                v-model="form.bookDesc"
                             ></el-input>
                         </el-form-item>
                     </el-form>
@@ -140,9 +140,9 @@
                             :before-upload="beforeAvatarUpload"
                         >
                             <img
-                                v-if="form.bookimg"
+                                v-if="form.bookImg"
                                 :src="
-                                    $store.state.settings.baseApi + form.bookimg
+                                    $store.state.settings.baseApi + form.bookImg
                                 "
                                 class="avatar"
                                 alt="封面无法显示"
@@ -182,16 +182,16 @@
             width="400px"
         >
             <el-form :model="form2">
-                <el-form-item label="用户名" prop="userid" label-width="80px">
+                <el-form-item label="用户名" prop="userId" label-width="80px">
                     <el-select
-                        v-model="form2.booktypeid"
+                        v-model="form2.bookTypeId"
                         placeholder="请选择用户"
                     >
                         <el-option
                             v-for="item in userData"
-                            :key="item.userid"
-                            :label="item.username"
-                            :value="item.userid"
+                            :key="item.userId"
+                            :label="item.userName"
+                            :value="item.userId"
                         >
                         </el-option>
                     </el-select>
@@ -225,45 +225,45 @@
         >
             <el-table-column fixed type="selection" width="55">
             </el-table-column>
-            <el-table-column fixed prop="bookid" label="序号" width="100">
+            <el-table-column fixed prop="bookId" label="序号" width="100">
             </el-table-column>
             <el-table-column
-                v-if="roleIsAdmin === false"
+                v-if="roleisAdmin === false"
                 label="图书封面"
                 width="155"
             >
                 <template slot-scope="scope">
                     <el-image
-                        :src="$store.state.settings.baseApi + scope.row.bookimg"
+                        :src="$store.state.settings.baseApi + scope.row.bookImg"
                         style="width: 130px; height: 180px"
                     ></el-image>
                 </template>
             </el-table-column>
             <el-table-column
-                prop="bookname"
+                prop="bookName"
                 label="图书名称"
                 width="150"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column
-                prop="bookauthor"
+                prop="bookAuthor"
                 label="图书作者"
                 width="100"
                 show-overflow-tooltip
             >
             </el-table-column>
-            <el-table-column prop="bookprice" label="图书价格" width="100">
+            <el-table-column prop="bookPrice" label="图书价格" width="100">
             </el-table-column>
             <el-table-column
-                prop="booktypename"
+                prop="bookTypeName"
                 label="图书类型名"
                 width="100"
                 show-overflow-tooltip
             >
             </el-table-column>
             <el-table-column
-                prop="bookdesc"
+                prop="bookDesc"
                 label="图书描述"
                 min-width="300"
                 show-overflow-tooltip
@@ -271,7 +271,7 @@
             </el-table-column>
             <el-table-column label="图书状态" width="100">
                 <template slot-scope="scope">
-                    <span v-if="scope.row.isborrowed === 1" style="color: red"
+                    <span v-if="scope.row.isBorrowed === 1" style="color: red"
                         >已借出</span
                     >
                     <span v-else style="color: #1aac1a">未借出</span>
@@ -280,7 +280,7 @@
             <el-table-column
                 fixed="right"
                 label="操作"
-                :width="roleIsAdmin ? '440px' : '260px'"
+                :width="roleisAdmin ? '440px' : '260px'"
             >
                 <template slot-scope="scope">
                     <el-button
@@ -364,7 +364,7 @@ export default {
         });
     },
     mounted() {
-        if (this.roleIsAdmin === false) {
+        if (this.roleisAdmin === false) {
             this.queryParam.limit = 5;
             this.handleSizeChange(this.queryParam.limit);
         }
@@ -407,9 +407,9 @@ export default {
         // 显示全部
         handleShowAll() {
             this.queryParam.page = 1;
-            this.queryParam.bookname = null;
-            this.queryParam.bookauthor = null;
-            this.queryParam.booktypeid = null;
+            this.queryParam.bookName = null;
+            this.queryParam.bookAuthor = null;
+            this.queryParam.bookTypeId = null;
             queryBookInfosByPage(this.queryParam).then((res) => {
                 if (res.code === 0) {
                     this.tableData = res.data;
@@ -424,7 +424,7 @@ export default {
             console.log(file);
             if (res.code === 0) {
                 this.$message.success("上传成功");
-                this.form.bookimg = res.data;
+                this.form.bookImg = res.data;
             } else {
                 this.$message.error("上传失败，请联系管理员");
             }
@@ -455,14 +455,14 @@ export default {
             this.formType = 0;
             // 将空数据置入form
             this.form = {
-                bookid: null,
-                bookname: "",
-                bookauthor: "",
-                bookprice: "",
-                booktypeid: 1,
-                bookdesc: "",
-                isborrowed: 0,
-                bookimg: "",
+                bookId: null,
+                bookName: "",
+                bookAuthor: "",
+                bookPrice: "",
+                bookTypeId: 1,
+                bookDesc: "",
+                isBorrowed: 0,
+                bookImg: "",
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -479,14 +479,14 @@ export default {
             this.formType = 1;
             // 将行数据置入form
             this.form = {
-                bookid: row.bookid,
-                bookname: row.bookname,
-                bookauthor: row.bookauthor,
-                bookprice: row.bookprice,
-                booktypeid: row.booktypeid,
-                bookdesc: row.bookdesc,
-                isborrowed: row.isborrowed,
-                bookimg: row.bookimg,
+                bookId: row.bookId,
+                bookName: row.bookName,
+                bookAuthor: row.bookAuthor,
+                bookPrice: row.bookPrice,
+                bookTypeId: row.bookTypeId,
+                bookDesc: row.bookDesc,
+                isBorrowed: row.isBorrowed,
+                bookImg: row.bookImg,
             };
             // 显示表单框
             this.dialogFormVisible = true;
@@ -494,11 +494,11 @@ export default {
 
         // 点击借阅图书
         handleBorrow(row) {
-            if (this.roleIsAdmin) {
+            if (this.roleisAdmin) {
                 // 显示表单框
                 this.dialogFormVisible2 = true;
                 // 获取图书信息
-                this.form2.bookid = row.bookid;
+                this.form2.bookId = row.bookId;
 
                 // 获取用户信息
                 queryUsers().then((res) => {
@@ -506,7 +506,7 @@ export default {
                 });
             } else {
                 this.$confirm("您确定要借书吗?", "提示").then(() => {
-                    borrowBook(this.id, row.bookid).then((res) => {
+                    borrowBook(this.id, row.bookId).then((res) => {
                         if (res === 1) {
                             this.$message.success("借书成功");
                             this.handleCurrentChange(this.queryParam.page);
@@ -553,7 +553,7 @@ export default {
 
         // 借书的提交表单
         submitForm2() {
-            borrowBook(this.form2.userid, this.form2.bookid).then((res) => {
+            borrowBook(this.form2.userId, this.form2.bookId).then((res) => {
                 if (res === 1) {
                     this.$message.success("借书成功");
                     this.handleCurrentChange(this.queryParam.page);
@@ -633,9 +633,9 @@ export default {
             queryParam: {
                 page: 1,
                 limit: 10,
-                bookname: null,
-                bookauthor: null,
-                booktypeid: null,
+                bookName: null,
+                bookAuthor: null,
+                bookTypeId: null,
             },
             // 对话框表单显示
             dialogFormVisible: false,
@@ -644,40 +644,40 @@ export default {
             formType: 0,
             // 表单数据
             form: {
-                bookid: null,
-                bookname: "",
-                bookauthor: "",
-                bookprice: 0,
-                booktypeid: 1,
-                bookdesc: "",
-                isborrowed: 0,
-                bookimg: "",
+                bookId: null,
+                bookName: "",
+                bookAuthor: "",
+                bookPrice: 0,
+                bookTypeId: 1,
+                bookDesc: "",
+                isBorrowed: 0,
+                bookImg: "",
             },
             form2: {
-                userid: 1,
-                bookid: 1,
+                userId: 1,
+                bookId: 1,
             },
             rules: {
-                bookname: [
+                bookName: [
                     {
                         required: true,
                         message: "请输入图书名称",
                         trigger: "blur",
                     },
                 ],
-                bookauthor: [
+                bookAuthor: [
                     { required: true, message: "请输入作者", trigger: "blur" },
                 ],
-                bookprice: [
+                bookPrice: [
                     { required: true, message: "请输入价格", trigger: "blur" },
                 ],
-                booktypeid: [
+                bookTypeId: [
                     { required: true, message: "请选择类型", trigger: "blur" },
                 ],
-                bookdesc: [
+                bookDesc: [
                     { required: true, message: "请输入描述", trigger: "blur" },
                 ],
-                isborrowed: [
+                isBorrowed: [
                     { required: true, message: "请选择状态", trigger: "blur" },
                 ],
             },
@@ -690,7 +690,7 @@ export default {
         formTitle() {
             return this.formType === 0 ? "添加记录" : "修改记录";
         },
-        roleIsAdmin() {
+        roleisAdmin() {
             if (this.roles[0] === "admin") return true;
             else return false;
         },

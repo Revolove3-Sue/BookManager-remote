@@ -45,11 +45,11 @@ public class BookTypeServiceImpl implements BookTypeService {
         int count = 0;
         try{
             Map<String, Object> map = new HashMap<>();
-            map.put("booktypeid", bookType.getBooktypeid());
+            map.put("bookTypeId", bookType.getBookTypeId());
             if(bookInfoMapper.selectCountByType(map) > 0) {
                 return -1;
             }
-            count = bookTypeMapper.deleteByPrimaryKey(bookType.getBooktypeid());
+            count = bookTypeMapper.deleteByPrimaryKey(bookType.getBookTypeId());
         } catch (Exception e) {
             e.printStackTrace();
         }

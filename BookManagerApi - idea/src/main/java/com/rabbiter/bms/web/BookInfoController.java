@@ -29,7 +29,7 @@ public class BookInfoController {
         return bookInfoService.queryBookInfos();
     }
 
-    // 分页搜索查询图书信息 params: {page, limit, bookname, bookauthor, booktypeid}
+    // 分页搜索查询图书信息 params: {page, limit, bookName, bookAuthor, bookTypeId}
     @GetMapping(value = "/queryBookInfosByPage")
     public Map<String, Object> queryBookInfosByPage(@RequestParam Map<String, Object> params){
         MyUtils.parsePageParams(params);

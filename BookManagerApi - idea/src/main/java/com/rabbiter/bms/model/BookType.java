@@ -1,33 +1,33 @@
 package com.rabbiter.bms.model;
 
 public class BookType {
-    private Integer booktypeid;
+    private Integer bookTypeId;
 
-    private String booktypename;
+    private String bookTypeName;
 
-    private String booktypedesc;
+    private String bookTypeDesc;
 
-    public Integer getBooktypeid() {
-        return booktypeid;
+    public Integer getBookTypeId() {
+        return bookTypeId;
     }
 
-    public void setBooktypeid(Integer booktypeid) {
-        this.booktypeid = booktypeid;
+    public void setBookTypeId(Integer bookTypeId) {
+        this.bookTypeId = bookTypeId;
     }
 
-    public String getBooktypename() {
-        return booktypename;
+    public String getBookTypeName() {
+        return bookTypeName;
     }
 
-    public void setBooktypename(String booktypename) {
-        this.booktypename = booktypename;
+    public void setBookTypeName(String bookTypeName) {
+        this.bookTypeName = bookTypeName;
     }
 
-    public String getBooktypedesc() {
-        return booktypedesc;
+    public String getBookTypeDesc() {
+        return bookTypeDesc;
     }
 
-    public void setBooktypedesc(String booktypedesc) {
-        this.booktypedesc = booktypedesc;
+    public void setBookTypeDesc(String bookTypeDesc) {
+        this.bookTypeDesc = bookTypeDesc;
     }
 }

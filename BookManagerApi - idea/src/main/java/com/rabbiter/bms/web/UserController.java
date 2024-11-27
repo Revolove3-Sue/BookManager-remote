@@ -60,25 +60,25 @@ public class UserController {
 
     // 注册
     @RequestMapping(value = "/register")
-    public Integer register(String username, String password){
-        return userService.register(username, password);
+    public Integer register(String userName, String password){
+        return userService.register(userName, password);
     }
 
     // 修改密码
     @RequestMapping(value = {"/alterPassword", "reader/alterPassword"})
-    public Integer alterPassword(Integer userid, String username, Byte isadmin, String oldPassword, String newPassword){
+    public Integer alterPassword(Integer userId, String userName, Byte isAdmin, String oldPassword, String newPassword){
         //检查旧密码是否正确
         User userObj = new User();
-        userObj.setUserid(userid);
-        userObj.setUsername(username);
-        userObj.setUserpassword(oldPassword);
-        userObj.setIsadmin(isadmin);
+        userObj.setUserId(userId);
+        userObj.setUserName(userName);
+        userObj.setUserPassword(oldPassword);
+        userObj.setIsAdmin(isAdmin);
 
         User user = userService.login(userObj);
         if(user == null) {  //旧密码不正确
             return 0;
         } else {    //旧密码正确，设置新密码
-            userService.setPassword(userObj.getUserid(), newPassword);
+            userService.setPassword(userObj.getUserId(), newPassword);
             return 1;
         }
     }
@@ -95,7 +95,7 @@ public class UserController {
         return userService.queryUsers();
     }
 
-    // 分页查询用户 params: {page, limit, username}
+    // 分页查询用户 params: {page, limit, userName}
     @GetMapping(value = "/queryUsersByPage")
     public Map<String, Object> queryUsersByPage(@RequestParam Map<String, Object> params){
         MyUtils.parsePageParams(params);
