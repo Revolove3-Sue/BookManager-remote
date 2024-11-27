@@ -1,7 +1,12 @@
 package com.rabbiter.bms.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
 
+@Setter
+@Getter
 public class User implements Serializable {
     private Integer userId;
 
@@ -11,35 +16,4 @@ public class User implements Serializable {
 
     private Byte isAdmin;
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getUserPassword() {
-        return userPassword;
-    }
-
-    public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
-    }
-
-    public Byte getIsAdmin() {
-        return isAdmin;
-    }
-
-    public void setIsAdmin(Byte isAdmin) {
-        this.isAdmin = isAdmin;
-    }
 }
