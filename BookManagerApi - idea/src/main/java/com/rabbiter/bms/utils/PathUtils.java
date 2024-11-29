@@ -3,7 +3,11 @@ package com.rabbiter.bms.utils;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class PathUtils {
+    private static final Logger logger = LoggerFactory.getLogger(PathUtils.class);
     public static String getClassLoadRootPath() {
         String path = "";
         try {
@@ -22,7 +26,7 @@ public class PathUtils {
                 path = prePath.substring(1, prePath.length() - 1);
             }
         } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
+            logger.error("获取类加载根路径时发生错误", e);
         }
         return path;
     }

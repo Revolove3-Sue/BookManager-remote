@@ -20,6 +20,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping(value = "/borrow")
 public class BorrowController {
@@ -98,9 +101,8 @@ public class BorrowController {
             if(res1 == 0) throw new OperationFailureException("图书" + bookId + "添加借阅记录失败");
 
         } catch (Exception e) {
-            System.out.println("发生异常，进行手动回滚");
+            log.error("借书过程发生异常，进行手动回滚", e);
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            e.printStackTrace();
             return 0;
         }
         return 1;
@@ -139,9 +141,8 @@ public class BorrowController {
             if(res1 == 0) throw new OperationFailureException("图书" + bookId + "更新借阅记录失败");
 
         } catch (Exception e) {
-            System.out.println("发生异常，进行手动回滚");
+            log.error("还书过程发生异常，进行手动回滚", e);
             TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
-            e.printStackTrace();
             return 0;
         }
         return 1;

@@ -103,7 +103,7 @@
         <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>2.7.5</version>
+            <version>2.5.6</version>
             <configuration>
                 <mainClass>com.rabbiter.bms.BookManagerApplication</mainClass>
                 <finalName>Librasphere</finalName>

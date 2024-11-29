@@ -11,8 +11,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Component
 public class ProcessContextAware implements ServletContextAware {
+    private static final Logger logger = LoggerFactory.getLogger(ProcessContextAware.class);
     @Value("${server.port}")
     private String port;
 
@@ -40,7 +44,7 @@ public class ProcessContextAware implements ServletContextAware {
                 processBuilder.start();
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("关闭端口{}的进程时发生错误", port, e);
         }
 
     }

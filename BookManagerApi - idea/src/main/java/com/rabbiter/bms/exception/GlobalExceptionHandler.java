@@ -5,8 +5,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
+import lombok.extern.slf4j.Slf4j;
 
 @ControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = Exception.class)
@@ -14,7 +16,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<String> handleException(Exception e) {
         // 自定义异常处理逻辑
         String message = e.getMessage();
-        e.printStackTrace();
+        log.error("系统发生异常", e);
         if (message.contains("(using password: YES)")) {
             if (!message.contains("'root'@'")) {
                 message = "PU Request failed with status code 500";

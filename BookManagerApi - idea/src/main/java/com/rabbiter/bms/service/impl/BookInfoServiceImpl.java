@@ -11,7 +11,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
+
 @Service
+@Slf4j 
 public class BookInfoServiceImpl implements BookInfoService {
 
     @Resource
@@ -61,7 +64,7 @@ public class BookInfoServiceImpl implements BookInfoService {
             }
             count = bookInfoMapper.deleteByPrimaryKey(bookInfo.getBookId());
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error("删除图书信息失败", e);
         }
         return count;
     }

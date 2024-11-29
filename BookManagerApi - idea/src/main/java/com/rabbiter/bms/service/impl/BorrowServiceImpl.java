@@ -11,9 +11,13 @@ import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Service
 public class BorrowServiceImpl implements BorrowService {
 
+    private static final Logger logger = LoggerFactory.getLogger(BorrowServiceImpl.class);
     @Resource
     private BorrowMapper borrowMapper;
 
@@ -47,7 +51,7 @@ public class BorrowServiceImpl implements BorrowService {
             borrow.setBorrowTime(simpleDateFormat.parse(borrow.getBorrowTimeStr()));
             borrow.setReturnTime(simpleDateFormat.parse(borrow.getReturnTimeStr()));
         } catch (ParseException e) {
-            e.printStackTrace();
+            logger.error("解析借阅时间出错", e);
         }
         return borrowMapper.insertSelective(borrow);
     }
@@ -83,7 +87,7 @@ public class BorrowServiceImpl implements BorrowService {
             borrow.setBorrowTime(simpleDateFormat.parse(borrow.getBorrowTimeStr()));
             borrow.setReturnTime(simpleDateFormat.parse(borrow.getReturnTimeStr()));
         } catch (ParseException e) {
-            e.printStackTrace();
+            logger.error("解析更新时间出错", e);
         }
         return borrowMapper.updateByPrimaryKeySelective(borrow);
     }

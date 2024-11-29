@@ -18,14 +18,18 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Controller
 @RequestMapping("/update")
 public class UpdateController {
+    private static final Logger logger = LoggerFactory.getLogger(UpdateController.class);
     public static void main(String[] args) {
         try {
             System.out.println(new ClassPathResource("").getFile().getAbsolutePath());
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.error("获取ClassPath路径失败", e);
         }
     }
     /**
@@ -68,7 +72,7 @@ public class UpdateController {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("文件上传失败", e);
         }
         return res;
     }
