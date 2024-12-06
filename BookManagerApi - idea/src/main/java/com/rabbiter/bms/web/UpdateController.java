@@ -21,10 +21,13 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+// 文件上传控制器
 @Controller
 @RequestMapping("/update")
 public class UpdateController {
+     // 创建日志记录器
     private static final Logger logger = LoggerFactory.getLogger(UpdateController.class);
+    // 测试方法，用于获取ClassPath路径
     public static void main(String[] args) {
         try {
             System.out.println(new ClassPathResource("").getFile().getAbsolutePath());
@@ -32,14 +35,15 @@ public class UpdateController {
             logger.error("获取ClassPath路径失败", e);
         }
     }
-    /**
-     * 我的上传方法
-     * @param req
-     * @return
+     /**
+     * 文件上传的核心处理方法
+     * @param req HTTP请求对象
+     * @return 返回上传文件的访问路径
      */
     private String myUpdate(HttpServletRequest req) {
         String res = null;  // 返回网络路径
         try {
+            // 获取文件存储的目标目录路径
             String staticDir = PathUtils.getClassLoadRootPath() + "/src/main/resources/static/files/";
             // 如果结果目录不存在，则创建目录
             File resDirFile = new File(staticDir);
@@ -77,16 +81,20 @@ public class UpdateController {
         return res;
     }
 
-    /**
-     * 上传图片
-     * @param req
-     * @return
+   /**
+     * 处理图片上传的接口方法
+     * @param req HTTP请求对象
+     * @return 返回包含上传结果的Map对象
+     *         code: 0表示成功
+     *         data: 文件访问路径
      */
     @RequestMapping("/updateImg")
     @ResponseBody
     public Map<String,Object> updateImg(HttpServletRequest req){
+        // 调用文件上传处理方法
         String resPath = myUpdate(req);
 
+        // 构建响应结果
         Map<String,Object> res = new HashMap<>();
         res.put("code",0);
         res.put("data", resPath);

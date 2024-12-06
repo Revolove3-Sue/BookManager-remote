@@ -1,6 +1,6 @@
 /*
- * @Description: 
- * @Author: 
+ * @Description:
+ * @Author:
  * @Date: 2024-02-21 18:13:21
  */
 import axios from 'axios.js'
@@ -10,7 +10,7 @@ import { getToken } from '@/utils/auth'
 
 // create an axios instance
 const service = axios.create({
-  baseURL: 'http://localhost:9111/BookManager/', // url = base url + request url
+  baseURL: 'http://172.16.1.11:9111/BookManager/', // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
   timeout: 50000 // request timeout
 })

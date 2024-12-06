@@ -6,37 +6,45 @@
   <component name="ChangeListManager">
     <list default="true" id="7ec74cc9-2e2d-43b2-9537-f96191aa059e" name="更改" comment="优化项目结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/BookManagerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/BookManagerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/config/CorsConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookTypeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BorrowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BorrowServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/PathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/PathUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/ProcessContextAware.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/ProcessContextAware.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/NotEnoughException.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/NotEnoughException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/OperationFailureException.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/OperationFailureException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/UpdateController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/BookManagerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/BookManagerApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/config/CorsConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/GlobalExceptionHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/BookInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/BookInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/BookType.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/BookType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/Borrow.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/Borrow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookInfoServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookTypeServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BorrowServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BorrowServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/NotEnoughException.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/NotEnoughException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/OperationFailureException.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/exception/OperationFailureException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/web/UpdateController.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/web/UpdateController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4402d5052f71f7566e7c3a39379f804e.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4402d5052f71f7566e7c3a39379f804e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerVue/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerVue/src/utils/request.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -50,46 +58,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Maven.BookManagerApi [package].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.BookManagerApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BookManagerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/陶闰喆/Documents/GitHub/Librasphere&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15429688&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Mappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;a44eaee18422c85eaa8b4f5e440e68a3&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Maven.BookManagerApi [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.BookManagerApplication (1).executor": "Run",
+    "Spring Boot.BookManagerApplication.executor": "Run",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "1.8",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/陶闰喆/Documents/GitHub/Librasphere",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15429688",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "spring.configuration.checksum": "a44eaee18422c85eaa8b4f5e440e68a3",
+    "ts.external.directory.path": "E:\\IntelliJ IDEA 2024.1\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="Spring Boot.BookManagerApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -159,6 +171,11 @@
       <workItem from="1731594890598" duration="10482000" />
       <workItem from="1732704496680" duration="6180000" />
       <workItem from="1732761012264" duration="3739000" />
+      <workItem from="1732844786832" duration="4302000" />
+      <workItem from="1732892978339" duration="2395000" />
+      <workItem from="1733312063451" duration="4803000" />
+      <workItem from="1733484510257" duration="669000" />
+      <workItem from="1733485195326" duration="13018000" />
     </task>
     <task id="LOCAL-00001" summary="修复 无法解析符号 'PathUtils' 的问题">
       <created>1731488246129</created>
@@ -223,5 +240,38 @@
     <MESSAGE value="添加必要的导入语句，修复部分错误" />
     <MESSAGE value="优化项目结构" />
     <option name="LAST_COMMIT_MESSAGE" value="优化项目结构" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/UserController.java</url>
+          <line>23</line>
+          <properties class="com.rabbiter.bms.web.UserController" method="login">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BookManagerVue/src/api/user.js</url>
+          <line>3</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BookManagerVue/src/api/user.js</url>
+          <line>5</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/BookManagerVue/src/store/modules/user.js</url>
+          <line>39</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
