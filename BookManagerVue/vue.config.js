@@ -24,7 +24,7 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
-  publicPath: '/BookManager',
+  publicPath: '/BookManager/',
   outputDir: 'dist',
   assetsDir: 'static',
   lintOnSave: false,
@@ -36,6 +36,17 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    // 配置代理
+    proxy: {
+      '/BookManager': {
+        target: 'http://localhost:9111',  // 后端服务的地址
+        changeOrigin: true,  // 如果你的后端服务和前端在不同的域名下，这个配置是必要的
+        secure: false,  // 如果后端使用的是 http，设为 false；https 使用时设为 true
+        pathRewrite: {
+          '^/BookManager': ''  // 替换路径，防止代理请求带上多余的路径
+        }
+      }
     },
     before: require('./mock/mock-server.js')
   },

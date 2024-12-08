@@ -12,6 +12,7 @@ import { getToken } from '@/utils/auth'
 const service = axios.create({
   baseURL: 'http://localhost:9111/BookManager/', // url = base url + request url
   // withCredentials: true, // send cookies when cross-domain requests
+  withCredentials: true,
   timeout: 50000 // request timeout
 })
 

@@ -6,100 +6,103 @@ import org.apache.tomcat.util.http.fileupload.FileItemFactory;
 import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletFileUpload;
 import org.apache.tomcat.util.http.fileupload.servlet.ServletRequestContext;
-import org.springframework.core.io.ClassPathResource;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.File;
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-// 文件上传控制器
-@Controller
+/**
+ * 文件上传控制器
+ * 处理图片等文件的上传请求
+ */
+@Slf4j
+@RestController
 @RequestMapping("/update")
 public class UpdateController {
-     // 创建日志记录器
-    private static final Logger logger = LoggerFactory.getLogger(UpdateController.class);
-    // 测试方法，用于获取ClassPath路径
-    public static void main(String[] args) {
-        try {
-            System.out.println(new ClassPathResource("").getFile().getAbsolutePath());
-        } catch (IOException e) {
-            logger.error("获取ClassPath路径失败", e);
-        }
-    }
-     /**
-     * 文件上传的核心处理方法
+
+    private static final String UPLOAD_DIR = "/static/files/";
+    private static final String SUCCESS_CODE = "0";
+    
+    /**
+     * 处理图片上传请求
      * @param req HTTP请求对象
-     * @return 返回上传文件的访问路径
+     * @return 包含上传结果的Map：
+     *         - code: 0表示成功
+     *         - data: 文件访问路径
      */
-    private String myUpdate(HttpServletRequest req) {
-        String res = null;  // 返回网络路径
+    @PostMapping("/updateImg")
+    @ResponseBody
+    public Map<String, Object> updateImg(HttpServletRequest req) {
+        Map<String, Object> result = new HashMap<>();
         try {
-            // 获取文件存储的目标目录路径
-            String staticDir = PathUtils.getClassLoadRootPath() + "/src/main/resources/static/files/";
-            // 如果结果目录不存在，则创建目录
-            File resDirFile = new File(staticDir);
-            if(!resDirFile.exists()) {
-                boolean flag = resDirFile.mkdirs();
-                if(!flag) throw new RuntimeException("创建结果目录失败");
+            String filePath = handleFileUpload(req);
+            if (filePath != null) {
+                result.put("code", SUCCESS_CODE);
+                result.put("data", filePath);
+            } else {
+                result.put("code", "1");
+                result.put("msg", "文件上传失败");
             }
-            //先判断上传的数据是否多段数据（只有是多段的数据，才是文件上传的）
-            if (ServletFileUpload.isMultipartContent(req)) {
-                // 创建 FileItemFactory 工厂实现类
-                FileItemFactory fileItemFactory = new DiskFileItemFactory();
-                // 创建用于解析上传数据的工具类 ServletFileUpload 类
-                ServletFileUpload servletFileUpload = new ServletFileUpload(fileItemFactory);
-                // 解析上传的数据，得到每一个表单项 FileItem
-                List<FileItem> list = servletFileUpload.parseRequest(new ServletRequestContext(req));
-                // 循环判断，每一个表单项，是普通类型，还是上传的文件
-                for (FileItem fileItem : list) {
-                    if ( !fileItem.isFormField()) { // 是上传的文件
-                        // 上传的文件
-                        System.out.println("表单项的 name 属性值：" + fileItem.getFieldName());
-                        System.out.println("上传的文件名：" + fileItem.getName());
-                        // 加个时间戳防止重名
-                        String newFileName = System.currentTimeMillis() + fileItem.getName();
-                        // 写文件
-                        File file = new File(staticDir + "/" + newFileName);
-                        fileItem.write(file);
-                        // 返回值
-                        res = "/files/" + newFileName;
-                    }
+        } catch (Exception e) {
+            log.error("文件上传处理失败", e);
+            result.put("code", "1");
+            result.put("msg", "文件上传异常：" + e.getMessage());
+        }
+        return result;
+    }
+
+    /**
+     * 处理文件上传的核心方法
+     * @param req HTTP请求对象
+     * @return 上传成功返回文件访问路径，失败返回null
+     */
+    private String handleFileUpload(HttpServletRequest req) {
+        try {
+            // 获取文件存储目录
+            String uploadDir = PathUtils.getClassLoadRootPath() + UPLOAD_DIR;
+            File uploadPath = new File(uploadDir);
+            
+            // 确保上传目录存在
+            if (!uploadPath.exists() && !uploadPath.mkdirs()) {
+                log.error("创建上传目录失败: {}", uploadDir);
+                return null;
+            }
+
+            // 检查是否是多部分请求
+            if (!ServletFileUpload.isMultipartContent(req)) {
+                log.warn("非文件上传请求");
+                return null;
+            }
+
+            // 创建文件上传处理器
+            FileItemFactory factory = new DiskFileItemFactory();
+            ServletFileUpload upload = new ServletFileUpload(factory);
+
+            // 解析请求
+            List<FileItem> items = upload.parseRequest(new ServletRequestContext(req));
+            
+            // 处理上传的文件
+            for (FileItem item : items) {
+                if (!item.isFormField()) {
+                    // 生成唯一文件名
+                    String fileName = System.currentTimeMillis() + "_" + item.getName();
+                    log.info("处理上传文件: {}", fileName);
+
+                    // 保存文件
+                    File file = new File(uploadPath, fileName);
+                    item.write(file);
+
+                    // 返回文件访问路径
+                    return "/files/" + fileName;
                 }
             }
         } catch (Exception e) {
-            logger.error("文件上传失败", e);
+            log.error("文件上传处理异常", e);
         }
-        return res;
+        return null;
     }
-
-   /**
-     * 处理图片上传的接口方法
-     * @param req HTTP请求对象
-     * @return 返回包含上传结果的Map对象
-     *         code: 0表示成功
-     *         data: 文件访问路径
-     */
-    @RequestMapping("/updateImg")
-    @ResponseBody
-    public Map<String,Object> updateImg(HttpServletRequest req){
-        // 调用文件上传处理方法
-        String resPath = myUpdate(req);
-
-        // 构建响应结果
-        Map<String,Object> res = new HashMap<>();
-        res.put("code",0);
-        res.put("data", resPath);
-
-        return res;
-    }
-
 }

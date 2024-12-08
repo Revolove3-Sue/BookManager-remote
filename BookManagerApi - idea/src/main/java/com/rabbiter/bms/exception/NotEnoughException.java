@@ -3,9 +3,6 @@ package com.rabbiter.bms.exception;
 /**
  * 库存不足异常类
  * 当图书库存不足或图书已被全部借出时抛出此异常
- * 
- * @author trz
- * @since 1.0.0
  */
 public class NotEnoughException extends RuntimeException {
     

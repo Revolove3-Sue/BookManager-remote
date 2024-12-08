@@ -6,8 +6,39 @@
   <component name="ChangeListManager">
     <list default="true" id="7ec74cc9-2e2d-43b2-9537-f96191aa059e" name="更改" comment="优化项目结构">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/config/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/config/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/NotEnoughException.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/NotEnoughException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/OperationFailureException.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/exception/OperationFailureException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/interceptor/ReaderInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/interceptor/ReaderInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/interceptor/UserInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/interceptor/UserInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BookInfoMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BookInfoMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BookTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BookTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BorrowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/BorrowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/BookInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/BookInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/BookType.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/BookType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/Borrow.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/Borrow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BookInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BookInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BookTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BookTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BorrowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/BorrowService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookInfoServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookTypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BookTypeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BorrowServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/BorrowServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/TokenProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/utils/TokenProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BookInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BookInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BookTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BookTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BorrowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/BorrowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/UpdateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/java/com/rabbiter/bms/web/UpdateController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/config/CorsConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/config/CorsConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookInfoServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookTypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/BookTypeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerApi - idea/target/classes/com/rabbiter/bms/service/impl/UserServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4402d5052f71f7566e7c3a39379f804e.json" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerVue/node_modules/.cache/babel-loader/4402d5052f71f7566e7c3a39379f804e.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerVue/src/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerVue/src/utils/request.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BookManagerVue/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/BookManagerVue/vue.config.js" afterDir="false" />
@@ -91,7 +122,7 @@
       <recent name="com" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BookManagerApplication">
+  <component name="RunManager" selected="npm.dev">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,6 +197,7 @@
       <workItem from="1733312063451" duration="4803000" />
       <workItem from="1733484510257" duration="669000" />
       <workItem from="1733485195326" duration="13018000" />
+      <workItem from="1733586813853" duration="6763000" />
     </task>
     <task id="LOCAL-00001" summary="修复 无法解析符号 'PathUtils' 的问题">
       <created>1731488246129</created>

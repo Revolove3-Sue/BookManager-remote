@@ -1,11 +1,8 @@
 package com.rabbiter.bms.exception;
 
 /**
- * 操作失败异常
+ * 操作失败异常类
  * 用于处理业务操作过程中的失败情况
- * 
- * @author trz
- * @since 1.0.0
  */
 public class OperationFailureException extends RuntimeException {
     

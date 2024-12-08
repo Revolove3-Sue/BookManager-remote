@@ -1,7 +1,4 @@
 package com.rabbiter.bms.utils;
-/**
- * 生成Token的工具类：  
- */
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
