@@ -52,10 +52,10 @@ Librasphere是一套在线图书管理系统，技术选型为前后端分离，
 
 ## 🏛️项目结构
 图书管理系统向下划分为图书管理、图书类型管理、用户信息管理和借阅管理四个模块。图书管理主要负责对图书的信息进行管理，以及管理员进行图书的查询；图书类型管理主要关联图书信息进行分类，可以对类型进行管理，以及对类型进行条件查询；借阅管理主要负责读者进行借书、还书操作，以及查询读者历史借阅信息；用户信息管理可以针对图书管理员和读者的信息进行管理。  
-![image](images\softwarestructure.png)
+![image](/images/softwarestructure.png)
 
 项目的数据结构由软件结构决定。  
-![image](images\datastructure.png)
+![image](/images/datastructure.png)
 
 ## ✨功能特性
 
