@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7ec74cc9-2e2d-43b2-9537-f96191aa059e" name="更改" comment="优化项目结构">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +164,7 @@
       <workItem from="1733586813853" duration="7655000" />
       <workItem from="1733675049302" duration="2157000" />
       <workItem from="1733827579647" duration="3229000" />
-      <workItem from="1733843317707" duration="5732000" />
+      <workItem from="1733843317707" duration="6371000" />
     </task>
     <task id="LOCAL-00001" summary="修复 无法解析符号 'PathUtils' 的问题">
       <created>1731488246129</created>
