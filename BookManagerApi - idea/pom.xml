@@ -19,7 +19,7 @@
     </properties>
 
     <dependencies>
-        <!--spring web起步依赖（包含了jackson）-->
+        <!--Spring Web起步依赖（包含了Jackson）-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -40,11 +40,18 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
+        </dependency>
+        <!--验证码相关依赖，例如生成图片验证码-->
+        <dependency>
+            <groupId>com.google.code.kaptcha</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>2.3.1</version>
         </dependency>
     </dependencies>
 
@@ -93,5 +100,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>

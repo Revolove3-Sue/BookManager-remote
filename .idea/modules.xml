@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/BookManager-remote.iml" filepath="$PROJECT_DIR$/.idea/BookManager-remote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BookManagerApi - idea/BookManagerApi.iml" filepath="$PROJECT_DIR$/BookManagerApi - idea/BookManagerApi.iml" />
     </modules>
   </component>
 </project>
